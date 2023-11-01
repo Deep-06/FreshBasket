@@ -1,9 +1,419 @@
 {
   "grocery": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ]
+        "id": 1,
+        "image": "fruit_image_1.jpg",
+        "name": "Apple",
+        "price": 4,
+        "category": "fruit"
+    },
+    {
+      "id": 2,
+      "image": "dairy_image_2.jpg",
+      "name": "Cheese",
+      "price": 4,
+      "category": "dairy"
+  },
+  {
+      "id": 3,
+      "image": "dairy_image_3.jpg",
+      "name": "Yogurt",
+      "price": 4,
+      "category": "dairy"
+  },
+    {
+        "id": 4,
+        "image": "fruit_image_2.jpg",
+        "name": "Banana",
+        "price": 4,
+        "category": "fruit"
+    },
+    {
+      "id": 5,
+      "image": "vegetable_image_1.jpg",
+      "name": "Carrot",
+      "price": 4,
+      "category": "vegetable"
+  },
+  {
+    "id": 6,
+    "image": "dairy_image_4.jpg",
+    "name": "Butter",
+    "price": 4,
+    "category": "dairy"
+},
+  {
+      "id": 7,
+      "image": "vegetable_image_2.jpg",
+      "name": "Broccoli",
+      "price": 4,
+      "category": "vegetable"
+  },
+    {
+        "id": 8,
+        "image": "fruit_image_3.jpg",
+        "name": "Orange",
+        "price": 4,
+        "category": "fruit"
+    },
+    {
+      "id": 9,
+      "image": "dairy_image_5.jpg",
+      "name": "Cream",
+      "price": 4,
+      "category": "dairy"
+  },
+    {
+        "id": 10,
+        "image": "fruit_image_4.jpg",
+        "name": "Strawberry",
+        "price": 4,
+        "category": "fruit"
+    },
+    {
+      "id": 11,
+      "image": "vegetable_image_3.jpg",
+      "name": "Spinach",
+      "price": 4,
+      "category": "vegetable"
+  },
+  {
+    "id": 12,
+    "image": "dairy_image_6.jpg",
+    "name": "Ice Cream",
+    "price": 4,
+    "category": "dairy"
+},
+{
+    "id": 13,
+    "image": "dairy_image_7.jpg",
+    "name": "Sour Cream",
+    "price": 4,
+    "category": "dairy"
+},
+    {
+        "id": 14,
+        "image": "fruit_image_5.jpg",
+        "name": "Pineapple",
+        "price": 4,
+        "category": "fruit"
+    },
+    {
+      "id": 15,
+      "image": "vegetable_image_4.jpg",
+      "name": "Tomato",
+      "price": 4,
+      "category": "vegetable"
+  },
+  {
+    "id": 16,
+    "image": "dairy_image_8.jpg",
+    "name": "Whipped Cream",
+    "price": 4,
+    "category": "dairy"
+},
+  {
+      "id": 17,
+      "image": "vegetable_image_5.jpg",
+      "name": "Bell Pepper",
+      "price": 4,
+      "category": "vegetable"
+  },
+    {
+        "id": 18,
+        "image": "fruit_image_6.jpg",
+        "name": "Mango",
+        "price": 4,
+        "category": "fruit"
+    },
+    {
+      "id": 19,
+      "image": "dairy_image_9.jpg",
+      "name": "Condensed Milk",
+      "price": 4,
+      "category": "dairy"
+  },
+  {
+      "id": 20,
+      "image": "dairy_image_10.jpg",
+      "name": "Cottage Cheese",
+      "price": 4,
+      "category": "dairy"
+  },
+    {
+        "id": 21,
+        "image": "fruit_image_7.jpg",
+        "name": "Grapes",
+        "price": 4,
+        "category": "fruit"
+    },
+    {
+        "id": 22,
+        "image": "fruit_image_8.jpg",
+        "name": "Watermelon",
+        "price": 4,
+        "category": "fruit"
+    },
+    {
+      "id": 23,
+      "image": "vegetable_image_6.jpg",
+      "name": "Cucumber",
+      "price": 4,
+      "category": "vegetable"
+  },
+  {
+    "id": 24,
+    "image": "dairy_image_11.jpg",
+    "name": "Ghee",
+    "price": 4,
+    "category": "dairy"
+},
+  {
+      "id": 25,
+      "image": "vegetable_image_7.jpg",
+      "name": "Onion",
+      "price": 4,
+      "category": "vegetable"
+  },
+  {
+    "id": 26,
+    "image": "fruit_image_9.jpg",
+    "name": "Kiwi",
+    "price": 4,
+    "category": "fruit"
+},
+  {
+      "id": 27,
+      "image": "vegetable_image_8.jpg",
+      "name": "Garlic",
+      "price": 4,
+      "category": "vegetable"
+  },
+  {
+    "id": 28,
+    "image": "dairy_image_12.jpg",
+    "name": "Almond Milk",
+    "price": 4,
+    "category": "dairy"
+},
+{
+    "id": 29,
+    "image": "dairy_image_13.jpg",
+    "name": "Coconut Milk",
+    "price": 4,
+    "category": "dairy"
+},
+    {
+        "id": 30,
+        "image": "fruit_image_10.jpg",
+        "name": "Pear",
+        "price": 4,
+        "category": "fruit"
+    },
+    {
+      "id": 31,
+      "image": "vegetable_image_9.jpg",
+      "name": "Lettuce",
+      "price": 4,
+      "category": "vegetable"
+  },
+    {
+        "id": 32,
+        "image": "fruit_image_11.jpg",
+        "name": "Cherry",
+        "price": 4,
+        "category": "fruit"
+    },
+    {
+        "id": 33,
+        "image": "dairy_image_14.jpg",
+        "name": "Evaporated Milk",
+        "price": 4,
+        "category": "dairy"
+    },
+    {
+        "id": 34,
+        "image": "fruit_image_12.jpg",
+        "name": "Blueberry",
+        "price": 4,
+        "category": "fruit"
+    },
+    
+  {
+      "id": 35,
+      "image": "vegetable_image_10.jpg",
+      "name": "Zucchini",
+      "price": 4,
+      "category": "vegetable"
+  },
+  {
+    "id": 36,
+    "image": "dairy_image_16.jpg",
+    "name": "Mozzarella",
+    "price": 4,
+    "category": "dairy"
+},
+  {
+      "id": 37,
+      "image": "vegetable_image_11.jpg",
+      "name": "Eggplant",
+      "price": 4,
+      "category": "vegetable"
+  },
+    {
+        "id": 38,
+        "image": "fruit_image_13.jpg",
+        "name": "Lemon",
+        "price": 4,
+        "category": "fruit"
+    },
+    {
+      "id": 39,
+      "image": "dairy_image_19.jpg",
+      "name": "Soy Milk",
+      "price": 4,
+      "category": "dairy"
+  },
+    {
+        "id": 40,
+        "image": "fruit_image_14.jpg",
+        "name": "Cantaloupe",
+        "price": 4,
+        "category": "fruit"
+    },
+    {
+      "id": 41,
+      "image": "vegetable_image_12.jpg",
+      "name": "Cabbage",
+      "price": 4,
+      "category": "vegetable"
+  },
+  {
+      "id": 42,
+      "image": "vegetable_image_13.jpg",
+      "name": "Artichoke",
+      "price": 4,
+      "category": "vegetable"
+  },
+    {
+        "id": 43,
+        "image": "fruit_image_15.jpg",
+        "name": "Raspberry",
+        "price": 4,
+        "category": "fruit"
+    },
+    {
+        "id": 44,
+        "image": "fruit_image_16.jpg",
+        "name": "Blackberry",
+        "price": 4,
+        "category": "fruit"
+    },
+    {
+        "id": 45,
+        "image": "fruit_image_17.jpg",
+        "name": "Apricot",
+        "price": 4,
+        "category": "fruit"
+    },
+    {
+        "id": 46,
+        "image": "fruit_image_18.jpg",
+        "name": "Plum",
+        "price": 4,
+        "category": "fruit"
+    },
+    {
+      "id": 47,
+      "image": "vegetable_image_14.jpg",
+      "name": "Potato",
+      "price": 4,
+      "category": "vegetable"
+  },
+  {
+    "id": 48,
+    "image": "dairy_image_20.jpg",
+    "name": "Heavy Cream",
+    "price": 4,
+    "category": "dairy"
+},
+  {
+      "id": 49,
+      "image": "vegetable_image_15.jpg",
+      "name": "Sweet Potato",
+      "price": 4,
+      "category": "vegetable"
+  },
+  {
+      "id": 50,
+      "image": "vegetable_image_16.jpg",
+      "name": "Radish",
+      "price": 4,
+      "category": "vegetable"
+  },
+    {
+        "id": 51,
+        "image": "fruit_image_19.jpg",
+        "name": "Peach",
+        "price": 4,
+        "category": "fruit"
+    },
+    {
+      "id": 52,
+      "image": "dairy_image_22.jpg",
+      "name": "Swiss Cheese",
+      "price": 4,
+      "category": "dairy"
+  },
+    {
+      "id": 53,
+      "image": "vegetable_image_17.jpg",
+      "name": "Cauliflower",
+      "price": 4,
+      "category": "vegetable"
+  },
+  {
+      "id": 54,
+      "image": "vegetable_image_18.jpg",
+      "name": "Green Beans",
+      "price": 4,
+      "category": "vegetable"
+  },
+    {
+        "id": 55,
+        "image": "fruit_image_20.jpg",
+        "name": "Mandarin",
+        "price": 4,
+        "category": "fruit"
+    },
+    {
+      "id": 56,
+      "image": "dairy_image_31.jpg",
+      "name": "Paneer",
+      "price": 4,
+      "category": "dairy"
+  },
+    {
+      "id": 57,
+      "image": "vegetable_image_19.jpg",
+      "name": "Asparagus",
+      "price": 4,
+      "category": "vegetable"
+  },
+  {
+      "id": 58,
+      "image": "vegetable_image_20.jpg",
+      "name": "Kale",
+      "price": 4,
+      "category": "vegetable"
+  },
+  {
+    "id": 59,
+    "image": "dairy_image_1.jpg",
+    "name": "Milk",
+    "price": 4,
+    "category": "dairy"
+}
+]
+
 }
