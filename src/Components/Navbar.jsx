@@ -7,7 +7,7 @@ export const Navbar = () => {
     <DIV>
      <h1>Fresh Food</h1>
      <Link to={'/'}>Home</Link>
-     <Link to={'/products'}>Grocery</Link> 
+     <Link to={'/products'}>Products</Link> 
      <Link to={"/login"}>Login</Link>
     </DIV>
   )
