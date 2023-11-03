@@ -24,6 +24,7 @@ const Navbar = () => {
   return (
 
 
+
     <Box  p={4} color="white">
       <Box 
 maxWidth="95%"
@@ -87,6 +88,7 @@ width="120px"
 };
 
 export default Navbar;
+
 
 
 
