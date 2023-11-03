@@ -7,8 +7,10 @@ import Footer from '../Components/Footer';
 const app =`https://images.pexels.com/photos/2487443/pexels-photo-2487443.jpeg?auto=compress&cs=tinysrgb&w=600`
 const c="https://housing.com/news/wp-content/uploads/2022/11/The-best-green-leafy-vegetables-to-add-to-your-diet.jpg"
 const bread="https://cdn.pixabay.com/photo/2021/06/14/07/36/product-6335145_1280.jpg"
+
 export const Homepage = () => {
   return (
+
     
 <>
       <Box  maxW="95%"
@@ -136,5 +138,6 @@ export const Homepage = () => {
 </>
 
     
+
   )
 }
