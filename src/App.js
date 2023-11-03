@@ -1,6 +1,6 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
-import { Navbar } from './Components/Navbar';
+import Navbar  from './Components/Navbar';
 import { AllRoutes } from './Pages/AllRoutes';
 
 function App() {
