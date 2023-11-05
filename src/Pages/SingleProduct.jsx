@@ -11,7 +11,8 @@ export const SingleProduct = () => {
   useEffect(()=>{
 const product=products.find(el => el.id === +id);
 setData(product);
-  },[])
+  },[]).
+  
 
   return (
     <div>

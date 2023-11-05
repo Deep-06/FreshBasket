@@ -11,9 +11,10 @@ export const ProductCard = ({id,image,name,price,category}) => {
       <h3>Price: {price}</h3>
       <h3>Category: {category}</h3>
       <button onClick={()=>navigate(`/singleproduct/${id}`)}>{name} Details</button>
+      <button onClick={()=>navigate(`/singleproduct/${id}`)}>Add to cart</button>
+      
       </div>
      
   )
 }
 
-//hgbjhbhjbj
