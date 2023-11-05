@@ -23,7 +23,7 @@ export const AllRoutes = () => {
             <Route path='/aboutus' element={<AboutUs/>}/>
 
             <Route path='/singleproduct/:id' element={<SingleProduct/>}/>
-            <Route path='/cartpage/:id' element={<CartPage/>}/>
+            <Route path='/cart' element={<CartPage/>}/>
             <Route path="/*" element={<h1>Page not Exist</h1>} />
         </Routes>
 

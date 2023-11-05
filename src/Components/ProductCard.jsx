@@ -1,5 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
+
 import { VStack, Text, Button, Image } from '@chakra-ui/react';
 import {styled} from "styled-components"
 
@@ -18,6 +19,7 @@ export const ProductCard = ({ id, image, name, price, category }) => {
         p={4} fontSize='l' m={2} color={'white'}>{name} Details</Button>
       </VStack>
     </DIV>
+
 
   )
 }

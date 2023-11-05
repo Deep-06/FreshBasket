@@ -22,6 +22,7 @@ import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
   const  color="#323239"
+  const green="#00c258"
   return (
 
 
@@ -51,20 +52,23 @@ width="120px"
   margin={"0px 30px"}
     alignItems="center" color={"#29C250"}  fontWeight={600} >
       
-          <NavLink  to="/" fontSize="lg"  >
+         
+          <Link  href="/" fontSize="lg"  textDecoration="none" color={green}>
             Home
 
-          </NavLink>
-          <NavLink  to="/products" fontSize="lg">
-            Products
-          </NavLink>
-          <NavLink  to="/aboutus" fontSize="lg">
-            About Us
-          </NavLink>
-          <NavLink  to="/offer" fontSize="lg">
+          </Link>
+          <Link  href="/products" fontSize="lg"  textDecoration="none" color={green}>
 
-            Offers
-          </NavLink>
+            Products
+          </Link>
+          <Link  href="/aboutus" fontSize="lg"  textDecoration="none" color={green}>
+            About Us
+
+          </Link>
+          <Link  href="/cart" fontSize="lg"  textDecoration="none" color={green}>
+            cart
+          </Link>
+
         
           {/* <IconButton
           
@@ -82,7 +86,7 @@ width="120px"
           width='100px'
           border="none"
           borderRadius="10px"
-          bg="#29C250"
+          bg={green}
           color={"white"}  fontSize="lg" fontWeight={600}>
             Login
           </Button>
