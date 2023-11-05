@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import { ProductCard } from '../Components/ProductCard';
+import { SingleCard } from '../Components/SingleCard';
+import {Text} from '@chakra-ui/react';
 
 export const SingleProduct = () => {
   const {id}=useParams();
@@ -11,13 +12,13 @@ export const SingleProduct = () => {
   useEffect(()=>{
 const product=products.find(el => el.id === +id);
 setData(product);
-  },[]).
+  },[])
   
 
   return (
     <div>
-      <h2>Product-id: {id}</h2>
-      <ProductCard {...data}/>
+      <Text fontSize='2xl' fontWeight="extrabold" color='green'>Product-id: {id}</Text>
+      <SingleCard {...data}/>
     </div>
   )
 }

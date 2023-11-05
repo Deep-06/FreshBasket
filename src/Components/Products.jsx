@@ -43,5 +43,14 @@ gap:15px;
 text-align:center;
 align-items:center;
 padding:10px;
-background-color:lightgreen;
+
+@media only screen and (max-width: 600px) {
+    display:grid;
+    grid-template-columns:repeat(1,1fr);
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1020px) {
+    display:grid;
+    grid-template-columns:repeat(1,1fr);
+}
 `;
