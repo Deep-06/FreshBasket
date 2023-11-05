@@ -5,7 +5,7 @@ import { PRODUCT_FAILURE, PRODUCT_REQUEST, PRODUCT_SUCCESS } from "./actionTypes
 export const getProducts=(paramObj)=>(dispatch)=>{
 dispatch({type:PRODUCT_REQUEST});
 axios
-.get('http://localhost:8080/products',paramObj)
+.get('https://mock-api-freshbasket.onrender.com/products',paramObj)
 .then((res)=>{
     dispatch({type:PRODUCT_SUCCESS, payload:res.data})
 })
@@ -14,5 +14,6 @@ axios
 })
 }
 
-//https://mock-api-foodbasket-grocery.onrender.com/grocery
+
 //http://localhost:8080/grocery
+//https://mock-api-freshbasket.onrender.com/
