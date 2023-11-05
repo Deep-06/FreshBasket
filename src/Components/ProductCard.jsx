@@ -1,24 +1,35 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import { addTocart } from '../Redux/Cart/action';
-import { useDispatch } from 'react-redux';
 
-export const ProductCard = ({id,image,name,price,category}) => {
-  const navigate=useNavigate();
-const dispatch= useDispatch()
+import { VStack, Text, Button, Image } from '@chakra-ui/react';
+import {styled} from "styled-components"
+
+export const ProductCard = ({ id, image, name, price, category }) => {
+  const navigate = useNavigate();
+
   return (
-    <div >
-      <img src={image} alt={name} width='100%'/>
-      <h3>Product: {name}</h3>
-      <h3>Price: {price}</h3>
-      <h3>Category: {category}</h3>
-      <button onClick={()=>navigate(`/singleproduct/${id}`)}>{name} Details</button>
-      <button onClick={()=>{
-        dispatch(addTocart(id))
-      }}>Add to cart</button>
-      
-      </div>
-     
+
+    <DIV >
+      <Image src={image} alt={name} width='100%' borderRadius='10%' />
+      <VStack spacing={1} lineHeight={2} color={'black'}>
+        <Text fontSize='xl' >Product: {name}</Text>
+        <Text fontSize='xl'>Price: {price}</Text>
+        <Text fontSize='xl'>Category: {category}</Text>
+        <Button onClick={() => navigate(`/singleproduct/${id}`)} bgColor={"green"}
+        p={4} fontSize='l' m={2} color={'white'}>{name} Details</Button>
+      </VStack>
+    </DIV>
+
+
   )
 }
+
+const DIV = styled.div`
+text-align:center;
+align-items:center;
+padding:10px;
+background-color:whitesmoke;
+border:2px solid grey;
+border-radius:10%;
+`;
 

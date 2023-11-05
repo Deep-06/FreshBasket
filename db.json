@@ -1,419 +1,598 @@
 {
-  "grocery": [
+  "products": [
     {
-        "id": 1,
-        "image": "fruit_image_1.jpg",
-        "name": "Apple",
-        "price": 4,
-        "category": "fruit"
+      "id": 1,
+      "image": "https://t4.ftcdn.net/jpg/00/59/96/75/360_F_59967553_9g2bvhTZf18zCmEVWcKigEoevGzFqXzq.jpg",
+      "name": "Apple",
+      "price": 200,
+      "category": "fruit",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id eos nemo, commodi eum repellat ducimus."
     },
     {
       "id": 2,
-      "image": "dairy_image_2.jpg",
+      "image": "https://img.freepik.com/free-vector/emmental-cheese-wedge-with-thin-slices-swiss-italian-dairy-fresh-organic-product_1441-1612.jpg?size=626&ext=jpg&ga=GA1.1.270366329.1690118250&semt=sph",
       "name": "Cheese",
-      "price": 4,
-      "category": "dairy"
-  },
-  {
-      "id": 3,
-      "image": "dairy_image_3.jpg",
-      "name": "Yogurt",
-      "price": 4,
-      "category": "dairy"
-  },
+      "price": 100,
+      "category": "dairy",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id eos nemo, commodi eum repellat ducimus."
+    },
     {
-        "id": 4,
-        "image": "fruit_image_2.jpg",
-        "name": "Banana",
-        "price": 4,
-        "category": "fruit"
+      "id": 71,
+      "image": "https://img.freepik.com/free-photo/muffin-chocolate-chip-isolated_1101-2631.jpg?size=626&ext=jpg&ga=GA1.1.270366329.1690118250&semt=sph",
+      "name": "Muffin",
+      "price": 20,
+      "category": "bakery",
+      "description": "A small, individual-sized quick bread that's often sweet and moist."
+    },
+    {
+      "id": 84,
+      "image": "https://img.freepik.com/premium-photo/picture-bunch-meats-that-are-cut-up_905510-5840.jpg?size=626&ext=jpg&ga=GA1.1.270366329.1690118250&semt=ais",
+      "name": "Mutton Leg",
+      "price": 400,
+      "category": "mutton",
+      "description": "Mutton leg, a larger cut suitable for roasting or slow cooking."
+    },
+    {
+      "id": 28,
+      "image": "https://img.freepik.com/free-vector/almond-milk-abstract-background_52683-666.jpg?size=626&ext=jpg&ga=GA1.1.270366329.1690118250&semt=ais",
+      "name": "Almond Milk",
+      "price": 40,
+      "category": "dairy",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id eos nemo, commodi eum repellat ducimus."
+    },
+    {
+      "id": 62,
+      "image": "https://img.freepik.com/premium-vector/delicious-salmon-fish-with-slices-lemon-fresh-lettuce-leaf-ceramic-plate-tasty-dish-holiday-dinner-flat-vector-icon_223337-7973.jpg?size=626&ext=jpg&ga=GA1.1.270366329.1690118250&semt=sph",
+      "name": "Tuna",
+      "price": 500,
+      "category": "seafood",
+      "description": "Tuna is a widely consumed fish with a meaty texture and distinctive flavor."
+    },
+    
+    {
+      "id": 67,
+      "image": "https://img.freepik.com/premium-photo/plate-with-mussel-seafood-cuisine-isolated-white-background_9493-25813.jpg?size=626&ext=jpg&ga=GA1.1.270366329.1690118250&semt=ais",
+      "name": "Mussels",
+      "price": 700,
+      "category": "seafood",
+      "description": "Mussels are bivalve mollusks enjoyed for their briny taste and tender texture."
+    },
+    {
+      "id": 3,
+      "image": "https://m.media-amazon.com/images/I/71XJs5pf3+L.jpg",
+      "name": "Yogurt",
+      "price": 30,
+      "category": "dairy",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id eos nemo, commodi eum repellat ducimus."
+    },
+    {
+      "id": 87,
+      "image": "https://img.freepik.com/free-photo/top-view-fried-ribs-with-spicy-sauce-dark-plate_176474-3365.jpg?size=626&ext=jpg&ga=GA1.1.270366329.1690118250&semt=ais",
+      "name": "Mutton Ribs",
+      "price": 400,
+      "category": "mutton",
+      "description": "Mutton ribs, tender and flavorful, perfect for grilling or slow cooking."
+    },
+    {
+      "id": 4,
+      "image": "https://img.freepik.com/free-psd/realistic-fresh-banana-background_23-2150319843.jpg?size=626&ext=jpg&ga=GA1.1.270366329.1690118250&semt=sph",
+      "name": "Banana",
+      "price": 50,
+      "category": "fruit",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id eos nemo, commodi eum repellat ducimus."
     },
     {
       "id": 5,
-      "image": "vegetable_image_1.jpg",
+      "image": "https://img.freepik.com/premium-photo/carrot-bunch-isolated-organic-vegetable-crop-fresh-carrot-bunch-white-background_162695-4486.jpg?size=626&ext=jpg&ga=GA1.1.270366329.1690118250&semt=sph",
       "name": "Carrot",
-      "price": 4,
-      "category": "vegetable"
-  },
-  {
-    "id": 6,
-    "image": "dairy_image_4.jpg",
-    "name": "Butter",
-    "price": 4,
-    "category": "dairy"
-},
-  {
-      "id": 7,
-      "image": "vegetable_image_2.jpg",
-      "name": "Broccoli",
-      "price": 4,
-      "category": "vegetable"
-  },
+      "price": 45,
+      "category": "vegetable",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id eos nemo, commodi eum repellat ducimus."
+    },
     {
-        "id": 8,
-        "image": "fruit_image_3.jpg",
-        "name": "Orange",
-        "price": 4,
-        "category": "fruit"
+      "id": 80,
+      "image": "https://img.freepik.com/premium-photo/chicken-raw-meat-white-meat-chicken-breast-chicken-leg-portion_488220-44784.jpg?size=626&ext=jpg&ga=GA1.1.270366329.1690118250&semt=ais",
+      "name": "Whole Chicken",
+      "price": 800,
+      "category": "chicken",
+      "description": "Entire chicken with both dark and white meat, perfect for roasting or grilling."
+    },
+    
+    {
+      "id": 6,
+      "image": "https://img.freepik.com/premium-photo/butter-white-background_996379-12792.jpg?size=626&ext=jpg&ga=GA1.1.270366329.1690118250&semt=sph",
+      "name": "Butter",
+      "price": 35,
+      "category": "dairy",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id eos nemo, commodi eum repellat ducimus."
+    },
+    {
+      "id": 7,
+      "image": "https://img.freepik.com/free-psd/fresh-broccoli-isolated-transparent-background_191095-9416.jpg?size=626&ext=jpg&ga=GA1.1.270366329.1690118250&semt=sph",
+      "name": "Broccoli",
+      "price": 200,
+      "category": "vegetable",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id eos nemo, commodi eum repellat ducimus."
+    },
+    {
+      "id": 66,
+      "image": "https://img.freepik.com/free-photo/top-view-oysters-from-province-zeeland-with-lemon-slices-served-white-plate_181624-28948.jpg?size=626&ext=jpg&ga=GA1.1.270366329.1690118250&semt=ais",
+      "name": "Scallops",
+      "price": 400,
+      "category": "seafood",
+      "description": "Scallops are tender and sweet shellfish often seared or used in seafood dishes."
+    },
+    {
+      "id": 86,
+      "image": "https://img.freepik.com/free-photo/high-angle-meat-with-tomatoes-herbs_23-2148611076.jpg?size=626&ext=jpg&ga=GA1.1.270366329.1690118250&semt=ais",
+      "name": "Mutton Mince",
+      "price": 1000,
+      "category": "mutton",
+      "description": "Minced mutton meat suitable for making kebabs, meatballs, or curries."
+    },
+    {
+      "id": 8,
+      "image": "https://hips.hearstapps.com/hmg-prod/images/orange-1558624428.jpg",
+      "name": "Orange",
+      "price": 90,
+      "category": "fruit",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id eos nemo, commodi eum repellat ducimus."
+    },
+    {
+      "id": 64,
+      "image": "https://img.freepik.com/premium-vector/drawing-digital-crab-live-red-design-trends-with-gradients_295116-276.jpg?size=626&ext=jpg&ga=GA1.1.270366329.1690118250&semt=sph",
+      "name": "Crab",
+      "price": 600,
+      "category": "seafood",
+      "description": "Crab offers sweet and delicate meat that's commonly used in various seafood dishes."
     },
     {
       "id": 9,
-      "image": "dairy_image_5.jpg",
+      "image": "https://media.istockphoto.com/id/510409604/photo/bowl-of-whipped-cream.jpg?s=612x612&w=0&k=20&c=sTjgpqPGcosVCsPZQPgjwzz8TpibmEmSr38znLjceko=",
       "name": "Cream",
-      "price": 4,
-      "category": "dairy"
-  },
+      "price": 220,
+      "category": "dairy",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id eos nemo, commodi eum repellat ducimus."
+    },
     {
-        "id": 10,
-        "image": "fruit_image_4.jpg",
-        "name": "Strawberry",
-        "price": 4,
-        "category": "fruit"
+      "id": 10,
+      "image": "https://img.freepik.com/free-photo/strawberry-berry-levitating-white-background_485709-57.jpg?size=626&ext=jpg&ga=GA1.1.270366329.1690118250&semt=sph",
+      "name": "Strawberry",
+      "price": 500,
+      "category": "fruit",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id eos nemo, commodi eum repellat ducimus."
+    },
+    {
+      "id": 75,
+      "image": "https://img.freepik.com/free-photo/side-view-fried-fish-with-arugula-lemon-tomato-sauce-tray_176474-3079.jpg?size=626&ext=jpg&ga=GA1.1.270366329.1690118250&semt=ais",
+      "name": "Trout",
+      "price": 900,
+      "category": "fish",
+      "description": "Rainbow trout offering delicate flesh and a mild, nutty flavor."
     },
     {
       "id": 11,
-      "image": "vegetable_image_3.jpg",
+      "image": "https://images.unsplash.com/photo-1576045057995-568f588f82fb?auto=format&fit=crop&q=80&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3BpbmFjaHxlbnwwfHwwfHx8MA%3D%3D",
       "name": "Spinach",
-      "price": 4,
-      "category": "vegetable"
-  },
-  {
-    "id": 12,
-    "image": "dairy_image_6.jpg",
-    "name": "Ice Cream",
-    "price": 4,
-    "category": "dairy"
-},
-{
-    "id": 13,
-    "image": "dairy_image_7.jpg",
-    "name": "Sour Cream",
-    "price": 4,
-    "category": "dairy"
-},
+      "price": 40,
+      "category": "vegetable",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id eos nemo, commodi eum repellat ducimus."
+    },
     {
-        "id": 14,
-        "image": "fruit_image_5.jpg",
-        "name": "Pineapple",
-        "price": 4,
-        "category": "fruit"
+      "id": 63,
+      "image": "https://img.freepik.com/premium-photo/grilled-salmon-fish-fillet-fresh-green-lettuce-illustration-generative-ai_115919-14214.jpg?size=626&ext=jpg&ga=GA1.1.270366329.1690118250&semt=ais",
+      "name": "Cod",
+      "price": 1200,
+      "category": "seafood",
+      "description": "Cod is a mild-flavored fish that's popular for its firm, flaky white flesh."
+    },
+    {
+      "id": 12,
+      "image": "https://img.freepik.com/free-photo/delicious-vanilla-ice-cream-bowl_23-2150796602.jpg?size=626&ext=jpg&ga=GA1.1.270366329.1690118250&semt=sph",
+      "name": "Ice Cream",
+      "price": 40,
+      "category": "dairy",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id eos nemo, commodi eum repellat ducimus."
+    },
+    {
+      "id": 70,
+      "image": "https://img.freepik.com/free-photo/delicious-glazed-doughnuts-arrangement_23-2150674038.jpg?size=626&ext=jpg&ga=GA1.1.270366329.1690118250&semt=sph",
+      "name": "Donut",
+      "price": 35,
+      "category": "bakery",
+      "description": "A deep-fried piece of dough, often sweetened and shaped as a ring or ball."
+    },
+    {
+      "id": 13,
+      "image": "https://media.istockphoto.com/id/510409604/photo/bowl-of-whipped-cream.jpg?s=612x612&w=0&k=20&c=sTjgpqPGcosVCsPZQPgjwzz8TpibmEmSr38znLjceko=",
+      "name": "Sour Cream",
+      "price": 45,
+      "category": "dairy",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id eos nemo, commodi eum repellat ducimus."
+    },
+    {
+      "id": 76,
+      "image": "https://img.freepik.com/free-photo/halves-fish-with-parsley-leaves_23-2148708667.jpg?size=626&ext=jpg&ga=GA1.1.270366329.1690118250&semt=ais",
+      "name": "Swordfish Steak",
+      "price": 450,
+      "category": "fish",
+      "description": "Firm-textured steak from swordfish, often grilled or seared."
+    },
+    {
+      "id": 85,
+      "image": "https://img.freepik.com/premium-photo/shoulder-lamb-board-high-quality-photo_488688-1283.jpg?size=626&ext=jpg&ga=GA1.1.270366329.1690118250&semt=ais",
+      "name": "Mutton Shoulder",
+      "price": 750,
+      "category": "mutton",
+      "description": "Mutton shoulder, a flavorful and versatile cut used for stews, curries, and roasting."
+    },
+    {
+      "id": 14,
+      "image": "https://img.freepik.com/free-vector/3d-realism-pineapple-juice-fresh-fruit-vector-illustration_433751-13.jpg?size=626&ext=jpg&ga=GA1.1.270366329.1690118250&semt=sph",
+      "name": "Pineapple",
+      "price": 100,
+      "category": "fruit",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id eos nemo, commodi eum repellat ducimus."
+    },
+    {
+      "id": 65,
+      "image": "https://img.freepik.com/free-photo/lobster-spices-gourmet-seafood-dish_23-2148708701.jpg?size=626&ext=jpg&ga=GA1.1.270366329.1690118250&semt=ais",
+      "name": "Lobster",
+      "price": 1400,
+      "category": "seafood",
+      "description": "Lobster is a luxury seafood known for its tender, flavorful meat."
     },
     {
       "id": 15,
-      "image": "vegetable_image_4.jpg",
+      "image": "https://img.freepik.com/free-vector/fresh-tomato_1053-566.jpg?size=626&ext=jpg&ga=GA1.1.270366329.1690118250&semt=sph",
       "name": "Tomato",
-      "price": 4,
-      "category": "vegetable"
-  },
-  {
-    "id": 16,
-    "image": "dairy_image_8.jpg",
-    "name": "Whipped Cream",
-    "price": 4,
-    "category": "dairy"
-},
-  {
-      "id": 17,
-      "image": "vegetable_image_5.jpg",
-      "name": "Bell Pepper",
-      "price": 4,
-      "category": "vegetable"
-  },
+      "price": 60,
+      "category": "vegetable",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id eos nemo, commodi eum repellat ducimus."
+    },
     {
-        "id": 18,
-        "image": "fruit_image_6.jpg",
-        "name": "Mango",
-        "price": 4,
-        "category": "fruit"
+      "id": 79,
+      "image": "https://img.freepik.com/premium-photo/raw-chicken-fillet-with-spices-herbs-top-view_266870-10937.jpg?size=626&ext=jpg&ga=GA1.1.270366329.1690118250&semt=ais",
+      "name": "Chicken Thighs",
+      "price": 450,
+      "category": "chicken",
+      "description": "Juicy and flavorful chicken thighs, suitable for various cooking methods."
+    },
+    {
+      "id": 16,
+      "image": "https://img.freepik.com/premium-photo/frozen-soft-cream-illustration-images_796580-901.jpg?size=626&ext=jpg&ga=GA1.1.270366329.1690118250&semt=ais",
+      "name": "Whipped Cream",
+      "price": 150,
+      "category": "dairy",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id eos nemo, commodi eum repellat ducimus."
+    },
+    {
+      "id": 81,
+      "image": "https://img.freepik.com/free-vector/meat-product-chicken-legs-icon-isolated_18591-83026.jpg?size=626&ext=jpg&ga=GA1.1.270366329.1690118250&semt=ais",
+      "name": "Chicken Wings",
+      "price": 600,
+      "category": "chicken",
+      "description": "Chicken wings, often enjoyed fried, grilled, or baked with various sauces."
+    },
+    {
+      "id": 17,
+      "image": "https://img.freepik.com/free-photo/red-pepper_1203-2186.jpg?size=626&ext=jpg&ga=GA1.1.270366329.1690118250&semt=ais",
+      "name": "Bell Pepper",
+      "price": 120,
+      "category": "vegetable",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id eos nemo, commodi eum repellat ducimus."
+    },
+    {
+      "id": 61,
+      "image": "https://img.freepik.com/free-vector/delicious-shelled-cooked-shrimp-with-green-leaves-white_1284-45639.jpg?size=626&ext=jpg&ga=GA1.1.270366329.1690118250&semt=sph",
+      "name": "Shrimp",
+      "price": 1300,
+      "category": "seafood",
+      "description": "Shrimp is a versatile seafood known for its mild flavor and firm texture."
+    },
+    {
+      "id": 18,
+      "image": "https://img.freepik.com/free-vector/mangoes-realistic-style_23-2147627882.jpg?size=626&ext=jpg&ga=GA1.1.270366329.1690118250&semt=sph",
+      "name": "Mango",
+      "price": 400,
+      "category": "fruit",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id eos nemo, commodi eum repellat ducimus."
     },
     {
       "id": 19,
-      "image": "dairy_image_9.jpg",
+      "image": "https://img.freepik.com/free-photo/opened-jar-with-fresh-milk_23-2148399125.jpg?size=626&ext=jpg&ga=GA1.1.270366329.1690118250&semt=ais",
       "name": "Condensed Milk",
-      "price": 4,
-      "category": "dairy"
-  },
-  {
-      "id": 20,
-      "image": "dairy_image_10.jpg",
-      "name": "Cottage Cheese",
-      "price": 4,
-      "category": "dairy"
-  },
-    {
-        "id": 21,
-        "image": "fruit_image_7.jpg",
-        "name": "Grapes",
-        "price": 4,
-        "category": "fruit"
+      "price": 250,
+      "category": "dairy",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id eos nemo, commodi eum repellat ducimus."
     },
     {
-        "id": 22,
-        "image": "fruit_image_8.jpg",
-        "name": "Watermelon",
-        "price": 4,
-        "category": "fruit"
+      "id": 20,
+      "image": "https://img.freepik.com/free-vector/emmental-cheese-wedge-with-thin-slices-swiss-italian-dairy-fresh-organic-product_1441-1612.jpg?size=626&ext=jpg&ga=GA1.1.270366329.1690118250&semt=sph",
+      "name": "Cottage Cheese",
+      "price": 350,
+      "category": "dairy",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id eos nemo, commodi eum repellat ducimus."
+    },
+    {
+      "id": 21,
+      "image": "https://img.freepik.com/premium-photo/red-black-grapes-isolated-white-background_900706-10876.jpg?size=626&ext=jpg&ga=GA1.1.270366329.1690118250&semt=sph",
+      "name": "Grapes",
+      "price": 150,
+      "category": "fruit",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id eos nemo, commodi eum repellat ducimus."
+    },
+    {
+      "id": 22,
+      "image": "https://img.freepik.com/free-photo/watermelon-water-splash-isolated-white_628469-400.jpg?size=626&ext=jpg&ga=GA1.1.270366329.1690118250&semt=sph",
+      "name": "Watermelon",
+      "price": 200,
+      "category": "fruit",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id eos nemo, commodi eum repellat ducimus."
     },
     {
       "id": 23,
-      "image": "vegetable_image_6.jpg",
+      "image": "https://img.freepik.com/premium-vector/green-fresh-cucumber-isolated-white-background-vector-illustration-flat-style_625536-774.jpg?size=626&ext=jpg&ga=GA1.1.270366329.1690118250&semt=sph",
       "name": "Cucumber",
-      "price": 4,
+      "price": 40,
       "category": "vegetable"
-  },
-  {
-    "id": 24,
-    "image": "dairy_image_11.jpg",
-    "name": "Ghee",
-    "price": 4,
-    "category": "dairy"
-},
-  {
+    },
+    {
+      "id": 24,
+      "image": "https://img.freepik.com/premium-photo/honey-jar-with-white-background_705862-425.jpg?size=626&ext=jpg&ga=GA1.1.270366329.1690118250&semt=sph",
+      "name": "Ghee",
+      "price": 500,
+      "category": "dairy",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id eos nemo, commodi eum repellat ducimus."
+    },
+    {
       "id": 25,
-      "image": "vegetable_image_7.jpg",
+      "image": "https://img.freepik.com/premium-vector/red-onion-bulbs-with-chopped-green-onions-isolated_212889-2394.jpg?size=626&ext=jpg&ga=GA1.1.270366329.1690118250&semt=sph",
       "name": "Onion",
-      "price": 4,
-      "category": "vegetable"
-  },
-  {
-    "id": 26,
-    "image": "fruit_image_9.jpg",
-    "name": "Kiwi",
-    "price": 4,
-    "category": "fruit"
-},
-  {
-      "id": 27,
-      "image": "vegetable_image_8.jpg",
-      "name": "Garlic",
-      "price": 4,
-      "category": "vegetable"
-  },
-  {
-    "id": 28,
-    "image": "dairy_image_12.jpg",
-    "name": "Almond Milk",
-    "price": 4,
-    "category": "dairy"
-},
-{
-    "id": 29,
-    "image": "dairy_image_13.jpg",
-    "name": "Coconut Milk",
-    "price": 4,
-    "category": "dairy"
-},
-    {
-        "id": 30,
-        "image": "fruit_image_10.jpg",
-        "name": "Pear",
-        "price": 4,
-        "category": "fruit"
+      "price": 80,
+      "category": "vegetable",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id eos nemo, commodi eum repellat ducimus."
     },
     {
-      "id": 31,
-      "image": "vegetable_image_9.jpg",
-      "name": "Lettuce",
-      "price": 4,
-      "category": "vegetable"
-  },
-    {
-        "id": 32,
-        "image": "fruit_image_11.jpg",
-        "name": "Cherry",
-        "price": 4,
-        "category": "fruit"
-    },
-    {
-        "id": 33,
-        "image": "dairy_image_14.jpg",
-        "name": "Evaporated Milk",
-        "price": 4,
-        "category": "dairy"
-    },
-    {
-        "id": 34,
-        "image": "fruit_image_12.jpg",
-        "name": "Blueberry",
-        "price": 4,
-        "category": "fruit"
+      "id": 26,
+      "image": "https://img.freepik.com/premium-vector/realistic-kiwi-glossy-icon-with-shadow-isolated-white_88653-371.jpg?size=626&ext=jpg&ga=GA1.1.270366329.1690118250&semt=sph",
+      "name": "Kiwi",
+      "price": 500,
+      "category": "fruit",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id eos nemo, commodi eum repellat ducimus."
     },
     
-  {
-      "id": 35,
-      "image": "vegetable_image_10.jpg",
-      "name": "Zucchini",
-      "price": 4,
-      "category": "vegetable"
-  },
-  {
-    "id": 36,
-    "image": "dairy_image_16.jpg",
-    "name": "Mozzarella",
-    "price": 4,
-    "category": "dairy"
-},
-  {
-      "id": 37,
-      "image": "vegetable_image_11.jpg",
-      "name": "Eggplant",
-      "price": 4,
-      "category": "vegetable"
-  },
     {
-        "id": 38,
-        "image": "fruit_image_13.jpg",
-        "name": "Lemon",
-        "price": 4,
-        "category": "fruit"
+      "id": 29,
+      "image": "https://img.freepik.com/free-vector/coconut-milk-product-glass_1284-32754.jpg?size=626&ext=jpg&ga=GA1.1.270366329.1690118250&semt=ais",
+      "name": "Coconut Milk",
+      "price": 45,
+      "category": "dairy",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id eos nemo, commodi eum repellat ducimus."
+    },
+    {
+      "id": 74,
+      "image": "https://img.freepik.com/premium-photo/raw-tilapia-fish-fillet-with-seasonings-wooden-table-isolated-white-background_92534-2212.jpg?size=626&ext=jpg&ga=GA1.1.270366329.1690118250&semt=sph",
+      "name": "Tilapia",
+      "price": 750,
+      "category": "fish",
+      "description": "Mild-flavored and lean freshwater fish suitable for various cooking methods."
+    },
+    {
+      "id": 72,
+      "image": "https://img.freepik.com/premium-vector/cartoon-vector-illustration-isolated-object-delicious-flour-food-bakery-bread-whole-grain-toast_311865-9555.jpg?size=626&ext=jpg&ga=GA1.1.270366329.1690118250&semt=sph",
+      "name": "Bread",
+      "price": 45,
+      "category": "bakery",
+      "description": "A round pocket bread widely used in Mediterranean and Middle Eastern cuisines."
+    },
+    {
+      "id": 82,
+      "image": "https://img.freepik.com/premium-photo/bowl-ground-beef-sits-lemon-basil-garlic_900396-17529.jpg?size=626&ext=jpg&ga=GA1.1.270366329.1690118250&semt=ais",
+      "name": "Ground Chicken",
+      "price": 850,
+      "category": "chicken",
+      "description": "Minced chicken meat suitable for making patties, meatballs, or various recipes."
+    },
+    {
+      "id": 30,
+      "image": "https://img.freepik.com/free-vector/vintage-pear-illustration_53876-112720.jpg?size=626&ext=jpg&ga=GA1.1.270366329.1690118250&semt=sph",
+      "name": "Pear",
+      "price": 180,
+      "category": "fruit",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id eos nemo, commodi eum repellat ducimus."
+    },
+    {
+      "id": 77,
+      "image": "https://img.freepik.com/premium-photo/product-shots-photo-halibut-with-no-background_670382-122228.jpg?size=626&ext=jpg&ga=GA1.1.270366329.1690118250&semt=ais",
+      "name": "Halibut Fillet",
+      "price": 650,
+      "category": "fish",
+      "description": "Halibut fillet known for its sweet, delicate taste and firm texture."
+    },
+    {
+      "id": 34,
+      "image": "https://img.freepik.com/free-photo/delicious-organic-blueberries-mint-leaf_23-2148650177.jpg?size=626&ext=jpg&ga=GA1.1.270366329.1690118250&semt=ais",
+      "name": "Blueberry",
+      "price": 300,
+      "category": "fruit",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id eos nemo, commodi eum repellat ducimus."
+    },
+    {
+      "id": 36,
+      "image": "https://img.freepik.com/free-vector/emmental-cheese-wedge-with-thin-slices-swiss-italian-dairy-fresh-organic-product_1441-1612.jpg?size=626&ext=jpg&ga=GA1.1.270366329.1690118250&semt=sph",
+      "name": "Mozzarella",
+      "price": 450,
+      "category": "dairy",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id eos nemo, commodi eum repellat ducimus."
+    },
+    {
+      "id": 37,
+      "image": "https://img.freepik.com/premium-photo/fresh-eggplant-white-background_100488-21.jpg?size=626&ext=jpg&ga=GA1.1.270366329.1690118250&semt=sph",
+      "name": "Eggplant",
+      "price": 35,
+      "category": "vegetable",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id eos nemo, commodi eum repellat ducimus."
+    },
+    {
+      "id": 38,
+      "image": "https://img.freepik.com/premium-photo/fresh-lemons-isolated_272787-916.jpg?size=626&ext=jpg&ga=GA1.1.270366329.1690118250&semt=sph",
+      "name": "Lemon",
+      "price": 150,
+      "category": "fruit",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id eos nemo, commodi eum repellat ducimus."
     },
     {
       "id": 39,
-      "image": "dairy_image_19.jpg",
+      "image": "https://img.freepik.com/premium-photo/health-benefits-soy-milk-soy-milk-glass-soya-bean-isolated-top-view-white-background_779000-22.jpg?size=626&ext=jpg&ga=GA1.1.270366329.1690118250&semt=ais",
       "name": "Soy Milk",
-      "price": 4,
-      "category": "dairy"
-  },
-    {
-        "id": 40,
-        "image": "fruit_image_14.jpg",
-        "name": "Cantaloupe",
-        "price": 4,
-        "category": "fruit"
+      "price": 45,
+      "category": "dairy",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id eos nemo, commodi eum repellat ducimus."
     },
     {
       "id": 41,
-      "image": "vegetable_image_12.jpg",
+      "image": "https://img.freepik.com/premium-photo/fresh-chinese-cabbage-isolated-white-background_33736-3661.jpg?size=626&ext=jpg&ga=GA1.1.270366329.1690118250&semt=sph",
       "name": "Cabbage",
-      "price": 4,
-      "category": "vegetable"
-  },
-  {
-      "id": 42,
-      "image": "vegetable_image_13.jpg",
-      "name": "Artichoke",
-      "price": 4,
-      "category": "vegetable"
-  },
-    {
-        "id": 43,
-        "image": "fruit_image_15.jpg",
-        "name": "Raspberry",
-        "price": 4,
-        "category": "fruit"
+      "price": 45,
+      "category": "vegetable",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id eos nemo, commodi eum repellat ducimus."
     },
     {
-        "id": 44,
-        "image": "fruit_image_16.jpg",
-        "name": "Blackberry",
-        "price": 4,
-        "category": "fruit"
+      "id": 44,
+      "image": "https://img.freepik.com/premium-psd/one-blackberry-isolated_88281-5581.jpg?size=626&ext=jpg&ga=GA1.1.270366329.1690118250&semt=sph",
+      "name": "Blackberry",
+      "price": 400,
+      "category": "fruit",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id eos nemo, commodi eum repellat ducimus."
     },
     {
-        "id": 45,
-        "image": "fruit_image_17.jpg",
-        "name": "Apricot",
-        "price": 4,
-        "category": "fruit"
+      "id": 45,
+      "image": "https://img.freepik.com/free-psd/realistic-fresh-peach-background_23-2150319828.jpg?size=626&ext=jpg&ga=GA1.1.270366329.1690118250&semt=sph",
+      "name": "Apricot",
+      "price": 500,
+      "category": "fruit",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id eos nemo, commodi eum repellat ducimus."
     },
     {
-        "id": 46,
-        "image": "fruit_image_18.jpg",
-        "name": "Plum",
-        "price": 4,
-        "category": "fruit"
+      "id": 69,
+      "image": "https://img.freepik.com/free-vector/two-cupcakes-tasty-cakes-celebration-birthday-sweet-pastry-with-candle_1441-1832.jpg?size=626&ext=jpg&ga=GA1.1.270366329.1690118250&semt=sph",
+      "name": "Cupcake",
+      "price": 20,
+      "category": "bakery",
+      "description": "A small, individual cake often topped with frosting or decorations."
     },
     {
       "id": 47,
-      "image": "vegetable_image_14.jpg",
+      "image": "https://img.freepik.com/free-vector/vector-illustration-potato-colorful-gradient-mascot_341269-960.jpg?size=626&ext=jpg&ga=GA1.1.270366329.1690118250&semt=sph",
       "name": "Potato",
-      "price": 4,
-      "category": "vegetable"
-  },
-  {
-    "id": 48,
-    "image": "dairy_image_20.jpg",
-    "name": "Heavy Cream",
-    "price": 4,
-    "category": "dairy"
-},
-  {
-      "id": 49,
-      "image": "vegetable_image_15.jpg",
-      "name": "Sweet Potato",
-      "price": 4,
-      "category": "vegetable"
-  },
-  {
-      "id": 50,
-      "image": "vegetable_image_16.jpg",
-      "name": "Radish",
-      "price": 4,
-      "category": "vegetable"
-  },
+      "price": 70,
+      "category": "vegetable",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id eos nemo, commodi eum repellat ducimus."
+    },
     {
-        "id": 51,
-        "image": "fruit_image_19.jpg",
-        "name": "Peach",
-        "price": 4,
-        "category": "fruit"
+      "id": 48,
+      "image": "https://media.istockphoto.com/id/510409604/photo/bowl-of-whipped-cream.jpg?s=612x612&w=0&k=20&c=sTjgpqPGcosVCsPZQPgjwzz8TpibmEmSr38znLjceko=",
+      "name": "Heavy Cream",
+      "price": 170,
+      "category": "dairy",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id eos nemo, commodi eum repellat ducimus."
+    },
+    {
+      "id": 50,
+      "image": "https://img.freepik.com/premium-photo/it-leaves-with-radish-isolated-white-background_439318-1522.jpg?size=626&ext=jpg&ga=GA1.1.270366329.1690118250&semt=sph",
+      "name": "Radish",
+      "price": 40,
+      "category": "vegetable",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id eos nemo, commodi eum repellat ducimus."
     },
     {
       "id": 52,
-      "image": "dairy_image_22.jpg",
+      "image": "https://img.freepik.com/free-vector/emmental-cheese-wedge-with-thin-slices-swiss-italian-dairy-fresh-organic-product_1441-1612.jpg?size=626&ext=jpg&ga=GA1.1.270366329.1690118250&semt=sph",
       "name": "Swiss Cheese",
-      "price": 4,
-      "category": "dairy"
-  },
+      "price": 200,
+      "category": "dairy",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id eos nemo, commodi eum repellat ducimus."
+    },
     {
       "id": 53,
-      "image": "vegetable_image_17.jpg",
+      "image": "https://img.freepik.com/premium-photo/fresh-cauliflower-isolated-white-background_33736-2684.jpg?size=626&ext=jpg&ga=GA1.1.270366329.1690118250&semt=sph",
       "name": "Cauliflower",
-      "price": 4,
-      "category": "vegetable"
-  },
-  {
-      "id": 54,
-      "image": "vegetable_image_18.jpg",
-      "name": "Green Beans",
-      "price": 4,
-      "category": "vegetable"
-  },
+      "price": 50,
+      "category": "vegetable",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id eos nemo, commodi eum repellat ducimus."
+    },
     {
-        "id": 55,
-        "image": "fruit_image_20.jpg",
-        "name": "Mandarin",
-        "price": 4,
-        "category": "fruit"
+      "id": 54,
+      "image": "https://img.freepik.com/premium-vector/vector-cartoon-green-french-beans_574806-2087.jpg?size=626&ext=jpg&ga=GA1.1.270366329.1690118250&semt=sph",
+      "name": "Green Beans",
+      "price": 80,
+      "category": "vegetable",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id eos nemo, commodi eum repellat ducimus."
     },
     {
       "id": 56,
-      "image": "dairy_image_31.jpg",
+      "image": "https://img.freepik.com/premium-photo/three-pieces-tofu-are-stacked-top-each-other_81048-10134.jpg?size=626&ext=jpg&ga=GA1.1.270366329.1690118250&semt=sph",
       "name": "Paneer",
-      "price": 4,
-      "category": "dairy"
-  },
+      "price": 140,
+      "category": "dairy",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id eos nemo, commodi eum repellat ducimus."
+    },
     {
-      "id": 57,
-      "image": "vegetable_image_19.jpg",
-      "name": "Asparagus",
-      "price": 4,
-      "category": "vegetable"
-  },
-  {
       "id": 58,
-      "image": "vegetable_image_20.jpg",
-      "name": "Kale",
-      "price": 4,
-      "category": "vegetable"
-  },
-  {
-    "id": 59,
-    "image": "dairy_image_1.jpg",
-    "name": "Milk",
-    "price": 4,
-    "category": "dairy"
-}
-]
-
+      "image": "https://img.freepik.com/premium-vector/pea-isolated-white-background-vector-illustration_230920-2018.jpg?size=626&ext=jpg&ga=GA1.1.270366329.1690118250&semt=sph",
+      "name": "Peas",
+      "price": 100,
+      "category": "vegetable",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id eos nemo, commodi eum repellat ducimus."
+    },
+    {
+      "id": 59,
+      "image": "https://img.freepik.com/free-vector/vector-illustration-bottle-full-milk_1441-147.jpg?size=626&ext=jpg&ga=GA1.1.270366329.1690118250&semt=sph",
+      "name": "Milk",
+      "price": 60,
+      "category": "dairy",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id eos nemo, commodi eum repellat ducimus."
+    },
+    {
+      "id": 60,
+      "image": "https://img.freepik.com/free-photo/slice-raw-salmon_144627-11088.jpg?size=626&ext=jpg&ga=GA1.1.270366329.1690118250&semt=sph",
+      "name": "Salmon",
+      "price": 1050,
+      "category": "seafood",
+      "description": "Salmon is a popular fish known for its rich taste and high omega-3 fatty acid content."
+    },
+    {
+      "id": 68,
+      "image": "https://img.freepik.com/free-photo/top-view-croissants-with-grapes-plate-plaid-cloth-wooden-background_141793-27820.jpg?size=626&ext=jpg&ga=GA1.1.270366329.1690118250&semt=sph",
+      "name": "Croissant",
+      "price": 50,
+      "category": "bakery",
+      "description": "A flaky, buttery pastry that originated in France."
+    },
+    {
+      "id": 73,
+      "image": "https://img.freepik.com/free-photo/slice-raw-salmon_144627-11091.jpg?size=626&ext=jpg&ga=GA1.1.270366329.1690118250&semt=ais",
+      "name": "Salmon Fillet",
+      "price": 950,
+      "category": "fish",
+      "description": "Fresh salmon fillet known for its rich flavor and versatility in cooking."
+    },
+    {
+      "id": 78,
+      "image": "https://img.freepik.com/premium-photo/raw-chicken-breast-fillet-with-rosemary-spices-white-wooden-background-top-view-free-space-text_187166-30593.jpg?size=626&ext=jpg&ga=GA1.1.270366329.1690118250&semt=ais",
+      "name": "Chicken Breast",
+      "price": 550,
+      "category": "chicken",
+      "description": "Boneless and skinless chicken breast, versatile and lean."
+    },
+    {
+      "id": 83,
+      "image": "https://img.freepik.com/free-photo/top-view-meat-plate-with-tomatoes-herbs_23-2148611033.jpg?size=626&ext=jpg&ga=GA1.1.270366329.1690118250&semt=ais",
+      "name": "Mutton Chops",
+      "price": 450,
+      "category": "mutton",
+      "description": "Mutton chops, flavorful and tender, ideal for grilling or frying."
+    }
+  ]
 }

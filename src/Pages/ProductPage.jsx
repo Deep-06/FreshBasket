@@ -2,18 +2,21 @@ import React from 'react'
 import { Sidebar } from '../Components/Sidebar'
 import { Products } from '../Components/Products'
 import { styled } from 'styled-components'
+import {Text} from '@chakra-ui/react';
 
 export const ProductPage = () => {
   return (
+    <div>
+    <Text fontSize='2xl' fontWeight="extrabold">Product List</Text>
     <DIV>
-    <div>
-        <Sidebar/>
+    <div className='sidebar'>
+    <Sidebar/>
     </div>
-
-    <div>
-        <Products/>
+    <div className='product-list'>
+    <Products/>
     </div>
     </DIV>
+    </div>
   )
 }
 
@@ -22,6 +25,7 @@ const DIV = styled.div`
 display:flex;
 align-items:flex-start;
 
+
 .sidebar{
   width:15%;
 }
@@ -29,4 +33,6 @@ align-items:flex-start;
 .product-list{
   width:85%;
 }
+
+
 `;

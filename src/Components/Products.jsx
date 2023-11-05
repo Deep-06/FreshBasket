@@ -4,6 +4,8 @@ import { useDispatch } from 'react-redux'
 import { ProductCard } from './ProductCard';
 import { getProducts } from '../Redux/ProductReducer/action';
 import { useSearchParams } from 'react-router-dom';
+import {styled} from "styled-components"
+
 
 export const Products = () => {
   const dispatch=useDispatch();
@@ -25,11 +27,30 @@ const [searchParams]=useSearchParams();
   console.log(product);
   
   return (
-    <div style={{display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:"10px"}}>
+    <DIV >
         {product.length>0 && product.map((el)=>{
           return <ProductCard key={el.id} {...el}/>
         })}
         
-    </div>
+    </DIV>
   )
 }
+
+const DIV = styled.div`
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:15px;
+text-align:center;
+align-items:center;
+padding:10px;
+
+@media only screen and (max-width: 600px) {
+    display:grid;
+    grid-template-columns:repeat(1,1fr);
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1020px) {
+    display:grid;
+    grid-template-columns:repeat(1,1fr);
+}
+`;

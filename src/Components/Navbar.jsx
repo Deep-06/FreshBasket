@@ -55,16 +55,20 @@ width="120px"
          
           <Link  href="/" fontSize="lg"  textDecoration="none" color={green}>
             Home
+
           </Link>
           <Link  href="/products" fontSize="lg"  textDecoration="none" color={green}>
+
             Products
           </Link>
           <Link  href="/aboutus" fontSize="lg"  textDecoration="none" color={green}>
             About Us
+
           </Link>
           <Link  href="/cart" fontSize="lg"  textDecoration="none" color={green}>
             cart
           </Link>
+
         
           {/* <IconButton
           
