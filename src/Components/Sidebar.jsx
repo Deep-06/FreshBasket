@@ -53,26 +53,60 @@ export const Sidebar = () => {
                 <input type="checkbox" value={"dairy"}
                     onChange={handleCategory} checked={category.includes("dairy")}
                 />
-                <label >Dairy Products</label>
+                <label >Dairy</label>
             </div>
+            <div>
+                <input type="checkbox" value={"bakery"}
+                    onChange={handleCategory} checked={category.includes("bakery")}
+                />
+                <label >Bakery</label>
+            </div>
+            <div>
+                <input type="checkbox" value={"seafood"}
+                    onChange={handleCategory} checked={category.includes("seafood")}
+                />
+                <label >Seafood</label>
+            </div>
+            <div>
+                <input type="checkbox" value={"fish"}
+                    onChange={handleCategory} checked={category.includes("fish")}
+                />
+                <label >Fish</label>
+            </div>
+            <div>
+                <input type="checkbox" value={"chicken"}
+                    onChange={handleCategory} checked={category.includes("chicken")}
+                />
+                <label >Chicken</label>
+            </div>
+            <div>
+                <input type="checkbox" value={"mutton"}
+                    onChange={handleCategory} checked={category.includes("mutton")}
+                />
+                <label >Mutton</label>
+            </div>
+            
 
             <Text fontSize='2xl'>Sort by price</Text>
             <VStack onChange={handleOrder}>
-                <input type="radio" name="order" value={"asc"}
-                    defaultChecked={order === "asc"}
-                />
-                <label >Low to High</label>
-
-
-                <input type="radio" name="order" value={"desc"}
-                    defaultChecked={order === "desc"}
-                />
-                <label >High to Low</label>
-
-                <input type="radio" name="order" value={""}
-                    defaultChecked={order === ""}
-                />
-                <label >Reset</label>
+                <div>
+                    <input type="radio" name="order" value={"asc"}
+                        defaultChecked={order === "asc"}
+                    />
+                    <label >Low to High</label>
+                </div>
+                <div>
+                    <input type="radio" name="order" value={"desc"}
+                        defaultChecked={order === "desc"}
+                    />
+                    <label >High to Low</label>
+                </div>
+                <div>
+                    <input type="radio" name="order" value={""}
+                        defaultChecked={order === ""}
+                    />
+                    <label >Reset</label>
+                </div>
             </VStack>
         </VStack>
 

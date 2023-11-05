@@ -10,12 +10,12 @@ export const ProductCard = ({ id, image, name, price, category }) => {
 
     <DIV >
       <Image src={image} alt={name} width='100%' borderRadius='10%' />
-      <VStack spacing={1} lineHeight={0.5}>
-        <Text fontsize='xl' >Product: {name}</Text>
-        <Text fontsize='xl'>Price: {price}</Text>
-        <Text fontsize='xl'>Category: {category}</Text>
+      <VStack spacing={1} lineHeight={2} color={'black'}>
+        <Text fontSize='xl' >Product: {name}</Text>
+        <Text fontSize='xl'>Price: {price}</Text>
+        <Text fontSize='xl'>Category: {category}</Text>
         <Button onClick={() => navigate(`/singleproduct/${id}`)} bgColor={"green"}
-        p={8} fontsize='xl' color={'white'}>{name} Details</Button>
+        p={4} fontSize='l' m={2} color={'white'}>{name} Details</Button>
       </VStack>
     </DIV>
 
