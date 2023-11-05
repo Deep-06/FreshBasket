@@ -133,8 +133,6 @@ export const Homepage = () => {
     objectFit="cover"
      src="https://img.freepik.com/free-vector/flat-horizontal-sale-banner-template-world-vegetarian-day-celebration_23-2150746551.jpg?w=826&t=st=1699027197~exp=1699027797~hmac=46c7947e0294a7e535264fd9666b2b636a546ca045282fd520251efe0e86244b"/>
  </Box>
- <Footer/>
-
 </>
 
     
