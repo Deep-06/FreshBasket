@@ -34,6 +34,8 @@ border-radius:5%;
 margin:20px;
 margin-left:150px;
 margin-right:150px;
+box-shadow: lightgreen 0px 10px 20px, lightgreen 0px 6px 6px;
+box-shadow: lightgreen 0px 30px 90px;
 
 @media only screen and (max-width: 800px) {
     display:flex;
