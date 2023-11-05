@@ -35,7 +35,7 @@ export const Sidebar = () => {
     }, [category, order])
 
     return (
-        <VStack>
+        <VStack spacing={2} >
             <Text fontSize='2xl'>Filter by Category</Text>
             <div>
                 <input type="checkbox" value={"fruit"}

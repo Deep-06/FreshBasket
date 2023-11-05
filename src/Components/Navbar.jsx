@@ -52,8 +52,8 @@ width="120px"
            >
             Home
           </Link>
-          <Link  to="/grocery" fontSize="lg">
-            Grocery
+          <Link  to="/products" fontSize="lg">
+            Products
           </Link>
           <Link  to="/" fontSize="lg">
             PopularDeals
