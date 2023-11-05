@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import Footer from '../Components/Footer';
 
 export const AboutUs = () => {
   return (
@@ -59,6 +60,7 @@ export const AboutUs = () => {
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-Mlu0oAxzs56kVNq7ZHoz4_x4S4rj39Zy3w&usqp=CAU" alt="" />
             </div>
         </div>
+        
     </DIV>
   )
 }
