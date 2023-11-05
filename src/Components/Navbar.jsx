@@ -53,6 +53,7 @@ width="120px"
       
           <NavLink  to="/" fontSize="lg"  >
             Home
+
           </NavLink>
           <NavLink  to="/products" fontSize="lg">
             Products
@@ -61,6 +62,7 @@ width="120px"
             About Us
           </NavLink>
           <NavLink  to="/offer" fontSize="lg">
+
             Offers
           </NavLink>
         

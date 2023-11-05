@@ -5,15 +5,17 @@ import { styled } from 'styled-components'
 
 export const ProductPage = () => {
   return (
+    <div>
+    <h1>Product List</h1>
     <DIV>
-    <div>
-        <Sidebar/>
+    <div className='sidebar'>
+    <Sidebar/>
     </div>
-
-    <div>
-        <Products/>
+    <div className='product-list'>
+    <Products/>
     </div>
     </DIV>
+    </div>
   )
 }
 
@@ -21,6 +23,7 @@ export const ProductPage = () => {
 const DIV = styled.div`
 display:flex;
 align-items:flex-start;
+
 
 .sidebar{
   width:15%;
