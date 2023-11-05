@@ -16,6 +16,7 @@ import {
   Button,
 
 } from '@chakra-ui/react';
+import { NavLink } from 'react-router-dom';
 // import { Link  } from 'react-router-dom'; // You need to import this for routing
 // import { ShoppingCartIcon } from '@chakra-ui/icons';
 
@@ -26,6 +27,7 @@ const Navbar = () => {
 
 
     <Box  p={4} color="white">
+      
       <Box 
 maxWidth="95%"
 marginTop="10px"
@@ -39,6 +41,7 @@ display="flex"
           margin=" 0px 30px"
 width="120px"
         />
+        
         {/* <Spacer /> */}
         <HStack spacing={4}
           width="40%"
@@ -47,20 +50,21 @@ width="120px"
    justifyContent="space-around"
   margin={"0px 30px"}
     alignItems="center" color={"#29C250"}  fontWeight={600} >
-          <Link  to="/" fontSize="lg"  
-
-           >
+      
+          <NavLink  to="/" fontSize="lg"  >
             Home
-          </Link>
-          <Link  to="/products" fontSize="lg">
+
+          </NavLink>
+          <NavLink  to="/products" fontSize="lg">
             Products
-          </Link>
-          <Link  to="/" fontSize="lg">
-            PopularDeals
-          </Link>
-          <Link  to="/offer" fontSize="lg">
+          </NavLink>
+          <NavLink  to="/aboutus" fontSize="lg">
+            About Us
+          </NavLink>
+          <NavLink  to="/offer" fontSize="lg">
+
             Offers
-          </Link>
+          </NavLink>
         
           {/* <IconButton
           

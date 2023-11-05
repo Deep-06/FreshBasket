@@ -6,8 +6,8 @@ import { SingleProduct } from './SingleProduct'
 import { CartPage } from './CartPage'
 import { Login } from './Login'
 import { ProductPage } from './ProductPage'
-import { AboutUs } from './AboutUs'
 
+import {AboutUs} from "./AboutUs"
 
 export const AllRoutes = () => {
   return (

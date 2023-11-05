@@ -7,6 +7,7 @@ export const ProductCard = ({ id, image, name, price, category }) => {
   const navigate = useNavigate();
 
   return (
+
     <DIV >
       <Image src={image} alt={name} width='100%' borderRadius='10%' />
       <VStack spacing={1} lineHeight={0.5}>
@@ -29,3 +30,4 @@ background-color:whitesmoke;
 border:2px solid grey;
 border-radius:10%;
 `;
+
