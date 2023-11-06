@@ -10,7 +10,7 @@ export const ProductCard = ({ id, image, name, price, category }) => {
   return (
 
     <DIV >
-      <Image src={image} alt={name} width='100%' borderRadius='10%' />
+      <Image src={image} alt={name} width='100%' borderRadius='30%' />
       <VStack spacing={1} lineHeight={2} color={'black'}>
         <Text fontSize='xl' >Product: {name}</Text>
         <Text fontSize='xl'>Price: {price}</Text>
@@ -31,5 +31,6 @@ padding:10px;
 background-color:whitesmoke;
 border:2px solid grey;
 border-radius:10%;
+box-shadow: lightgreen 0px 2px 4px, lightgreen 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 `;
 

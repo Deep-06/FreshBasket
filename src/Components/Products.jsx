@@ -28,20 +28,22 @@ const [searchParams]=useSearchParams();
   console.log(product);
   
   return (
+   
+    
     <DIV >
         {product.length>0 && product.map((el)=>{
           return <ProductCard key={el.id} {...el}/>
         })}
         
     </DIV>
-    
+
   )
 }
 
 const DIV = styled.div`
 display:grid;
 grid-template-columns:repeat(4,1fr);
-gap:15px;
+gap:20px;
 text-align:center;
 align-items:center;
 padding:10px;

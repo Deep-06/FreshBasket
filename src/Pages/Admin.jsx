@@ -41,6 +41,10 @@ export const Admin = () => {
         <option value="vegetable">Vegetables</option>
         <option value="fruit">Fruits</option>
         <option value="dairy">Dairy</option>
+        <option value="bakery">Bakery</option>
+        <option value="seafood">Seafood</option>
+        <option value="chicken">Chicken</option>
+        <option value="mutton">Mutton</option>
         </select>
         <button type='submit'>Add Product</button>
     </form>
