@@ -62,7 +62,7 @@ This line directs existing users to the login page and encourages new users to s
 
 Our robust Backend Server furnishes the application with essential data and functionality, presenting a tapestry of endpoints:
 
-- **Server Link**: [https://mock-every-sunday-server.onrender.com](https://mock-api-freshbasket.onrender.com)
+- **Server Link**: [https://mock-api-freshbasket.onrender.com](https://mock-api-freshbasket.onrender.com)
 - **Endpoints**:
   1. `/users`: Seamlessly manage user data, including registration and authentication.
   2. `/collection`: Dive into our fashion collection, accessing detailed information about each exquisite piece.
