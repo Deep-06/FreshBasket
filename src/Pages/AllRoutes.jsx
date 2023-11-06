@@ -8,13 +8,22 @@ import { Login } from './Login'
 import { ProductPage } from './ProductPage'
 
 import {AboutUs} from "./AboutUs"
+import { ThemeProvider, createTheme } from '@mui/material'
+import { SignUp } from './SignUp'
+import { Payment } from './Payment'
+import { UserPage } from './UserPage'
+
+const theme = createTheme()
 
 export const AllRoutes = () => {
   return (
     <div>
         <Routes>
             <Route path='/' element={<Homepage/>}/>
-            <Route path='/login' element={<Login/>}/>
+            <Route path='/login' element={<ThemeProvider theme={theme}><Login/></ThemeProvider>}/>
+            <Route path='/signup' element={<ThemeProvider theme={theme}><SignUp/></ThemeProvider>}/>
+            <Route path='/payment' element={<Payment/>}/>
+            <Route path='/userpage' element={<UserPage/>}/>
             <Route path='/admin' element={<Admin/>}/>
 
             <Route path='/products' element={<ProductPage/>}/>
