@@ -34,6 +34,15 @@ At FreshBasket, we are passionate about purity, committed to quality, and dedica
 ![image](https://github.com/Sonika2223Kanojia/tart-clover-1298/assets/121815825/a766ad81-fbf4-483c-88d8-99ae8a295b95)
 ![image](https://github.com/Sonika2223Kanojia/tart-clover-1298/assets/121815825/1f00b573-44a5-4697-adbb-aad0ac08a6ca)
 
+### 5. Login and Signup 
+"For existing users, please log in. New users, sign up here."
+This line directs existing users to the login page and encourages new users to sign up.
+![image](https://github.com/Sonika2223Kanojia/tart-clover-1298/assets/121815825/b0a5e9f4-2ef7-4130-b04c-4174db3e71f4)
+![image](https://github.com/Sonika2223Kanojia/tart-clover-1298/assets/121815825/26dd1f33-0ac4-4134-a4cf-4417b4cff35c)
+
+### 6. PaymentPage 💰
+  ![image](https://github.com/Sonika2223Kanojia/tart-clover-1298/assets/121815825/27b00209-5bf2-4955-bc0f-89be6c1bfa40)
+
 ## 🚀 Tech Stacks
 
   The foundation of FRESHBASKET is meticulously constructed with:
@@ -63,7 +72,7 @@ Our robust Backend Server furnishes the application with essential data and func
 
 The masterpiece, FRESHBASKET, now graces the digital horizon, courtesy of Vercel. Embark on your fashion odyssey by following this guiding star:
 
-<h1><strong>Vercel Link:</strong> <a href="https://clothly.vercel.app/">freshbasket</a></h1>
+<h1><strong>Vercel Link:</strong> <a href="#">freshbasket</a></h1>
 
 Explore the enchanting features, and should you encounter any challenges or wish to share your fashion insights, our "Reviews" page eagerly awaits your presence.
 
