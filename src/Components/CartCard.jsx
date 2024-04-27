@@ -1,9 +1,19 @@
 import React, { useState } from 'react'
-import { VStack, Text, Button, Image } from '@chakra-ui/react';
+import { Text, Button, Image } from '@chakra-ui/react';
 import {styled} from "styled-components"
 
-export const CartCard = ({image, name, price, category}) => {
+export const CartCard = ({image, name, price}) => {
     const [count,setCount]=useState(1);
+
+    const handleDecrease = () => {
+      if (count > 1) {
+        setCount(count - 1);
+      }
+    };
+  
+    const handleIncrease = () => {
+      setCount(count + 1);
+    };
 
   return (
     <div style={{display:'flex', justifyContent:'space-around', alignItems:'center', width:'70%'}}>
@@ -13,10 +23,10 @@ export const CartCard = ({image, name, price, category}) => {
       
       <Text fontSize='xl' >Price: {price*count}</Text>
        <div style={{display:'flex', justifyContent:'space-around',width:'20%'}}>
-        <Button  onClick={()=>setCount(count-1)} disabled={count<=1 ? true : false} bgColor={"green"} 
+        <Button  onClick={handleDecrease} bgColor={"green"} 
         color={'white'} fontSize='xl'>-</Button>
         <h1>{count}</h1>
-        <Button onClick={()=>setCount(count+1)} bgColor={"green"} fontSize='xl' color={'white'}>+</Button>
+        <Button onClick={handleIncrease} bgColor={"green"} fontSize='xl' color={'white'}>+</Button>
        </div>
      
 
