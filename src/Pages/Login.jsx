@@ -117,6 +117,7 @@ const DIV = styled.div`
   padding: 20px;
   border-radius: 10px;
   display: flex;
+  flex-direction:row;
   gap: 5%;
   margin-top: 50px;
 
@@ -147,7 +148,7 @@ const DIV = styled.div`
   }
 
   .show {
-    width: 20%;
+    width: 25%;
     height: 55px;
     border-radius: 5px;
     color: black;
@@ -167,5 +168,10 @@ const DIV = styled.div`
     margin-top: 20px;
     margin-left: 15px;
     font-size: 16px;
+  }
+
+  @media (max-width: 650px) {
+    display:flex;
+    flex-direction:column;
   }
 `;

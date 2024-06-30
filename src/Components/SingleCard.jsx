@@ -17,16 +17,17 @@ export const SingleCard = ({ id, image, name, price, category,description }) => 
 
   return (
     <DIV>
-    <Box width='50%' p={4}>
+    <Box  width={{ base: '100%', md: '80%', lg: '60%' }}
+      p={{ base: 2, md: 4, lg: 6 }} display={'flex'} justifyContent={'center'} alignItems={'center'}>
     <Image src={image} alt={name} width='80%' borderRadius='20%' />
     </Box>
-    <VStack width='50%' textAlign="left" alignItems={'left'}>
+    <VStack width={{ base: '100%', md: '80%', lg: '60%' }} p={{ base: 4, md: 4, lg: 6 }} textAlign="left" alignItems={'left'}>
       <Text fontSize="2xl"  fontWeight="bold" >Product: {name}</Text>
       <Text fontSize="xl" fontWeight="bold">Description: {description}</Text>
       <Text fontSize="2xl" fontWeight="bold">Price: {price}</Text>
       <Text fontSize="2xl" fontWeight="bold">Category: {category}</Text>
       <Button onClick={handleCart} bgColor={"green"} width='50%'
-      p={4} fontSize="xl" fontWeight="bold" color={'white'} >Add To Cart</Button>
+      p={4} fontSize="l" fontWeight="bold" color={'white'} >Add To Cart</Button>
     </VStack>
   </DIV>
   )
@@ -46,8 +47,10 @@ margin-right:150px;
 box-shadow: lightgreen 0px 10px 20px, lightgreen 0px 6px 6px;
 box-shadow: lightgreen 0px 30px 90px;
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 700px) {
     display:flex;
     flex-direction:column;
+    margin-left:50px;
+margin-right:50px;
 }
 `;

@@ -48,13 +48,18 @@ text-align:center;
 align-items:center;
 padding:10px;
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 650px) {
     display:grid;
     grid-template-columns:repeat(1,1fr);
 }
 
-@media only screen and (min-width: 600px) and (max-width: 1020px) {
+@media only screen and (min-width: 651px) and (max-width: 800px) {
     display:grid;
-    grid-template-columns:repeat(1,1fr);
+    grid-template-columns:repeat(2,1fr);
+}
+
+@media only screen and (min-width: 801px) and (max-width: 1100px) {
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
 }
 `;

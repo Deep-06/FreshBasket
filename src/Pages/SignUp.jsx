@@ -197,4 +197,9 @@ const DIV = styled.div`
     font-size: 16px;
     cursor: pointer;
   }
+
+  @media (max-width: 650px) {
+    display:flex;
+    flex-direction:column;
+  }
 `;

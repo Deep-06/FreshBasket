@@ -1,14 +1,14 @@
 import React from 'react'
 import { Sidebar } from '../Components/Sidebar'
 import { Products } from '../Components/Products'
-import { styled } from 'styled-components'
-import { HStack, VStack, Image,Text } from '@chakra-ui/react';
+import { VStack, Image,Text } from '@chakra-ui/react';
+import styled from "styled-components";
 
 export const ProductPage = () => {
   return (
     <div>
 
-    <div style={{display:"flex", justifyContent:"space-between", gap:"10px", margin:'20px'}}>
+    <DIV_CON >
       <VStack bgColor={'whitesmoke'} p={0} borderRadius='30%'>
         <Image src='https://img.freepik.com/premium-photo/pyramid-healthy-food-front-view_23-2148256086.jpg?size=626&ext=jpg&ga=GA1.1.270366329.1690118250&semt=sph' alt='' w='70%' borderRadius='50%'/>
         <Text fontSize="xl" fontWeight="extrabold">Fruits</Text>
@@ -47,7 +47,7 @@ export const ProductPage = () => {
         <Image src='https://img.freepik.com/free-photo/top-view-delicious-seafood-arrangement_23-2148926757.jpg?size=626&ext=jpg&ga=GA1.1.270366329.1690118250&semt=ais' alt='' w='70%' borderRadius='50%'/>
         <Text fontSize="xl" fontWeight="extrabold">Fish</Text>
       </VStack>
-    </div>
+    </DIV_CON>
 
     <DIV>
     <div className='sidebar'>
@@ -65,7 +65,7 @@ export const ProductPage = () => {
 const DIV = styled.div`
 display:flex;
 align-items:flex-start;
-
+padding:10px;
 
 .sidebar{
   width:15%;
@@ -75,5 +75,31 @@ align-items:flex-start;
   width:85%;
 }
 
+@media (max-width: 650px) {
+  .sidebar{
+  width:25%;
+}
 
+.product-list{
+  width:65%;
+}
+  }
+`;
+
+const DIV_CON = styled.div`
+display:flex; 
+justify-content:space-between; 
+gap:10px;
+margin:20px;
+
+
+@media (max-width: 550px) {
+    display:grid;
+    grid-template-columns:repeat(3,1fr)
+  }
+
+  @media all and (min-width: 551px) and (max-width: 800px) {
+    display:grid;
+    grid-template-columns:repeat(4,1fr)
+  }
 `;

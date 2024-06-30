@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Text, Button, Image } from '@chakra-ui/react';
-import {styled} from "styled-components"
+// import {styled} from "styled-components"
 
 export const CartCard = ({image, name, price}) => {
     const [count,setCount]=useState(1);
@@ -36,13 +36,13 @@ export const CartCard = ({image, name, price}) => {
 }
 
 
-const DIV = styled.div`
-width:60%;
-text-align:center;
-align-items:center;
-padding:5px;
-//background-color:whitesmoke;
-//border:1px solid black;
-//border-radius:2%;
-//box-shadow: lightgreen 0px 2px 4px, lightgreen 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
-`;
+// const DIV = styled.div`
+// width:60%;
+// text-align:center;
+// align-items:center;
+// padding:5px;
+// //background-color:whitesmoke;
+// //border:1px solid black;
+// //border-radius:2%;
+// //box-shadow: lightgreen 0px 2px 4px, lightgreen 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+// `;

@@ -1,9 +1,11 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import { CartCard } from '../Components/CartCard'
-
+import { Button } from '@chakra-ui/react';
+import { useNavigate } from 'react-router-dom';
 export const CartPage = () => {
   const cart= useSelector((store)=>store.cartReducer.cart)
+  const navigate=useNavigate();
 console.log(cart)
 
 // const updateCount = (id, newCount) => {
@@ -23,6 +25,12 @@ console.log(cart)
         })}
       </div>
       <h1>Total:</h1>
+
+<div style={{display:"flex", justifyContent:"flex-end", padding:'20px'}}>
+<Button onClick={()=>navigate('/payment')} bgColor={"green"} width='30%'
+      p={4} fontSize="l" fontWeight="bold" color={'white'}  >Pay</Button>      
+</div>
+      
     </div>
     
     

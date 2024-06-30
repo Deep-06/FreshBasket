@@ -148,9 +148,9 @@ export const Payment = () => {
             <Icon alignItems="left" cursor={'pointer'} ml={2} w={12} h={12} as={PiContactlessPaymentLight}></Icon>
           </Box>
 
-          <Box w='100%'>
+          <Box>
 
-          <Cards number={state.number} expiry={state.expiry} cvc={state.cvc} name={state.name} focused={state.focus} />
+          <Cards  number={state.number} expiry={state.expiry} cvc={state.cvc} name={state.name} focused={state.focus} />
           </Box>
           
           <form>
