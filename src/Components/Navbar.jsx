@@ -99,7 +99,7 @@ const Navbar = () => {
         ) : (
           <Button
             to="/login"
-            size="md"
+            size="sm"
             height="40px"
             width="80px"
             border="none"
@@ -107,7 +107,7 @@ const Navbar = () => {
             bg={green}
             color={"white"}
             fontSize="lg"
-            fontWeight={600}
+            fontWeight={400}
           >
             <Link href={`/login`}>Login</Link>
           </Button>
