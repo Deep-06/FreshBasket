@@ -6,9 +6,7 @@ import React, { useEffect, useState } from "react";
 import img from "../Images/Elegant_Online_Shopping_Logo_Template-removebg-preview (3) (1).jpg";
 import { Box, Image, Link, HStack, Button, Container } from "@chakra-ui/react";
 import { NavLink } from "react-router-dom";
-//import { shallowEqual, useSelector } from "react-redux";
 // import { Link  } from 'react-router-dom'; // You need to import this for routing
-// import { ShoppingCartIcon } from '@chakra-ui/icons';
 
 const Navbar = () => {
   const color = "#323239";
