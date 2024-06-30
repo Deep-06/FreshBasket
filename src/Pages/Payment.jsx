@@ -1,4 +1,4 @@
-import { Box, Input, Flex, FormLabel, Text, Icon, Button, Heading, useToast, Image, Alert, AlertDescription, AlertIcon, AlertTitle } from '@chakra-ui/react';
+import { Box, Input, Flex, FormLabel, Text, Icon, Button, useToast,Alert, AlertDescription, AlertIcon, AlertTitle } from '@chakra-ui/react';
 import React, { useState } from 'react';
 import Cards from 'react-credit-cards-2';
 import 'react-credit-cards-2/dist/es/styles-compiled.css'; // Import the CSS for styling

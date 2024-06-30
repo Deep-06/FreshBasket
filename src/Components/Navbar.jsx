@@ -33,7 +33,8 @@ const Navbar = () => {
       display: "flex",
       flexDirection: 'row',
       justifyContent: "space-around",
-      alignItems: "center"
+      alignItems: "center",
+      padding:'10px',
     }}>
 
       <Image src={img} alt="Your Logo" width="100px" />
