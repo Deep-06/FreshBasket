@@ -40,7 +40,7 @@ align-items:center;
 padding:10px;
 background-color:whitesmoke;
 border:2px solid grey;
-border-radius:5%;
+border-radius:10px;
 margin:20px;
 margin-left:150px;
 margin-right:150px;

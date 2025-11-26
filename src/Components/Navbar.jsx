@@ -4,9 +4,8 @@
 
 import React, { useEffect, useState } from "react";
 import img from "../Images/Elegant_Online_Shopping_Logo_Template-removebg-preview (3) (1).jpg";
-import { Box, Image, Link, HStack, Button, Container } from "@chakra-ui/react";
-import { NavLink } from "react-router-dom";
-// import { Link  } from 'react-router-dom'; // You need to import this for routing
+import { Image, Link, HStack, Button } from "@chakra-ui/react";
+import { useSelector } from 'react-redux'
 
 const Navbar = () => {
   const color = "#323239";
@@ -22,6 +21,9 @@ const Navbar = () => {
     setUser(user);
     setIsAuth(authStatus);
   }, []);
+
+  const cart = useSelector((store) => store.cartReducer?.cart || []);
+  const cartCount = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
 
   return (
 
@@ -66,29 +68,15 @@ const Navbar = () => {
         >
           About Us
         </Link>
-
-        {/* <Link href="/cart" fontSize="lg" textDecoration="none" color={green}>
-            cart
-          </Link> */}
-
-        {/* <Link
-            href="/payment"
-            fontSize="lg"
-            textDecoration="none"
-            color={green}
-          >
-            Payment
-          </Link> */}
-
-        {/* <IconButton
-          
-            to="/cart"
-            icon={<ShoppingCartIcon />}
-            aria-label="Shopping Cart"
-            variant="solid"
-            bg="white"
-          /> */}
-        {/* <Avatar size="sm" name="User" src="https://bit.ly/dan-abramov" /> */}
+        <Link
+         href="/cart"
+         fontSize="lg"
+         textDecoration="none"
+         color={green}
+       >
+         Cart ({cartCount})
+       </Link>
+        
       </HStack>
       <div>
         {isAuth ? (

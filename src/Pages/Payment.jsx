@@ -5,6 +5,7 @@ import 'react-credit-cards-2/dist/es/styles-compiled.css'; // Import the CSS for
 import { BiCreditCardAlt } from 'react-icons/bi';
 import { PiContactlessPaymentLight } from 'react-icons/pi';
 import { useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux'
 
 export const Payment = () => {
   const [state, setState] = useState({
@@ -14,6 +15,9 @@ export const Payment = () => {
     name: '',
     focus: '',
   });
+
+  const cart = useSelector((store) => store.cartReducer?.cart || []);
+  const total = cart.reduce((sum, item) => sum + (Number(item.price || 0) * (item.quantity || 1)), 0);
 
   const [paid, setPaid] = useState();
 
@@ -245,7 +249,7 @@ export const Payment = () => {
                     h="60px"
                     onClick={handlePayment}
                   >
-                    Pay price 100/-
+                    Pay {total}/-
                   </Button>
                 </Flex>
               </Box>

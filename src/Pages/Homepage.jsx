@@ -83,7 +83,7 @@ export const Homepage = () => {
   return (
     <>
     <div style={{width:'100%',height:'100vh',backgroundColor:"#FFC9AD",backgroundImage: `url(${img})`,backgroundSize: 'cover',backgroundPosition: 'center'}}>
-      <H1> 10% off on your first purchase</H1>
+      <Text fontSize="30px" w="40%" textAlign={'left'} p="5%" textColor="#f06c2bff">FreshBasket: Your Source for Natural Goodness. <br></br> Discover fresh, delicious and natural products at FreshBasket.</Text>
     </div>
       <Box maxW="100%" padding='20px'>
         <Heading textAlign={"center"} p="10px" mb={'30px'} fontSize="50px" color={"#323139"}>

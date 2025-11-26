@@ -17,10 +17,6 @@ export const AboutUs = () => {
                 </div>
                 <div className='img-grid fifty'>
                     <div className='img-box'>
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnL0GWPLvsI6820oL4W2G49d10VMztD8Zl6g&usqp=CAU" alt="" />
-                        <p>Dry Fruits</p>
-                    </div>
-                    <div className='img-box'>
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC6N57q7e3v0tawWXMV6d8uXMdsiWAna0GCQ&usqp=CAU" alt="" />
                         <p>Fruits</p>
                     </div>
@@ -29,8 +25,12 @@ export const AboutUs = () => {
                         <p>Dairy Products</p>
                     </div>
                     <div className='img-box'>
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgO1BUZo87DiseMxF9TGrNIXn8LkctpRLk6Q&usqp=CAU" alt="" />
+                        <img src='https://img.freepik.com/free-vector/vegetables-realistic-composition-white-background-with-tomato-onion-sweet-hot-pepper-eggplant_1284-16242.jpg?size=626&ext=jpg&ga=GA1.1.270366329.1690118250&semt=sph' alt="" />
                         <p>Vegitables</p>
+                    </div>
+                    <div className='img-box'>
+                        <img src="https://img.freepik.com/free-vector/two-cupcakes-tasty-cakes-celebration-birthday-sweet-pastry-with-candle_1441-1832.jpg?size=626&ext=jpg&ga=GA1.1.270366329.1690118250&semt=sph" alt="" />
+                        <p>Bakery Products</p>
                     </div>
                 </div>
             </div>
@@ -57,7 +57,7 @@ export const AboutUs = () => {
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfYZOxmzJOOvUxFaA6o0H1qEUfbdWHSxTHRw&usqp=CAU" alt="" />
                 </div>
                 <div>
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-Mlu0oAxzs56kVNq7ZHoz4_x4S4rj39Zy3w&usqp=CAU" alt="" />
+                    <img src="https://images.seeklogo.com/logo-png/44/1/india-today-logo-png_seeklogo-440312.png" alt="" />
                 </div>
             </div>
 
@@ -115,12 +115,17 @@ margin-top:40px;
     .team div{
         box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
         border-radius:20px;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        padding:10px;
     }
     .team div:hover{
         box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
     }
     .team img{
         width:100%;
+        max-height:200px;
         border-radius:20px;
     }
     .img-box{

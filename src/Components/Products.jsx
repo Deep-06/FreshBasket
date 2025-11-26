@@ -4,13 +4,11 @@ import { useDispatch } from 'react-redux'
 import { ProductCard } from './ProductCard';
 import { getProducts } from '../Redux/ProductReducer/action';
 import { useSearchParams } from 'react-router-dom';
-import {styled} from "styled-components"
-import Footer from './Footer';
-
+import {styled} from "styled-components";
 
 export const Products = () => {
   const dispatch=useDispatch();
-  const product=useSelector((store)=>store.productReducer.products);
+  const {isLoading,products}=useSelector((store)=>store.productReducer);
 const [searchParams]=useSearchParams();
 
   const paramObj={
@@ -24,19 +22,20 @@ const [searchParams]=useSearchParams();
   useEffect(()=>{
   dispatch(getProducts(paramObj))
   },[searchParams])
-
-  console.log(product);
   
   return (
-   
-    
-    <DIV >
-        {product.length>0 && product.map((el)=>{
-          return <ProductCard key={el.id} {...el}/>
+    <>
+      {isLoading && <div style={{ fontSize: '20px', display: 'flex', justifyContent: 'center', alignItems:'center', minHeight: '300px', width: '100%' }}>
+        ...Loading
+       </div>
+      }
+      <DIV >
+        {products.length > 0 && products.map((el) => {
+          return <ProductCard key={el.id} {...el} />
         })}
-        
-    </DIV>
 
+      </DIV>
+    </>
   )
 }
 

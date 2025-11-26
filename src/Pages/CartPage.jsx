@@ -1,39 +1,37 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import { CartCard } from '../Components/CartCard'
-import { Button } from '@chakra-ui/react';
+import { Button, Text } from '@chakra-ui/react';
 import { useNavigate } from 'react-router-dom';
 export const CartPage = () => {
-  const cart= useSelector((store)=>store.cartReducer.cart)
-  const navigate=useNavigate();
-console.log(cart)
+  const cart = useSelector((store) => store.cartReducer.cart)
+  const navigate = useNavigate();
 
-// const updateCount = (id, newCount) => {
-//   // Logic to update count for the item in the cart
-//   // This function can be passed as a prop to the CartCard component
-//   // You can implement the logic according to your requirements
-// };
+  const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
 
-  return(
+  return (
     <div>
-      <h1>My Cart</h1>
-      <div style={{display:'felx', justifyContent:'center', alignItems:'center'}}>
-        {cart.map((el,i)=>{
-          return <CartCard key={i} 
-          {...el}
+      <Text fontSize='2xl' fontWeight='bold'>My Cart</Text>
+      <div style={{ display: 'flex', justifyContent:'center', alignItems:'center', flexDirection: 'column', gap: '10px' }}>
+        {cart.map((el) => {
+          return <CartCard key={el.id}
+            {...el}
           />
         })}
       </div>
-      <h1>Total:</h1>
 
-<div style={{display:"flex", justifyContent:"flex-end", padding:'20px'}}>
-<Button onClick={()=>navigate('/payment')} bgColor={"green"} width='30%'
-      p={4} fontSize="l" fontWeight="bold" color={'white'}  >Pay</Button>      
-</div>
-      
+      <div style={{ display: "flex", justifyContent: "flex-end", padding: '10px' }}>
+      <Text fontSize='xl' fontWeight='bold' width='20%'>Total: {total}</Text>
+      </div>
+                
+      <div style={{ display: "flex", justifyContent: "flex-end", padding: '20px' }}>
+        <Button onClick={() => navigate('/payment')} bgColor={"green"} width='20%'
+          p={4} fontSize="l" fontWeight="bold" color={'white'}  >Pay {total}</Button>
+      </div>
+
     </div>
-    
-    
+
+
   )
- 
+
 }
