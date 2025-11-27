@@ -1,4 +1,4 @@
-import { ADD_TO_CART, INCREMENT_QTY, DECREMENT_QTY, REMOVE_FROM_CART } from "./actionTypes";
+import { ADD_TO_CART, INCREMENT_QTY, DECREMENT_QTY, REMOVE_FROM_CART, CLEAR_CART } from "./actionTypes";
 
 const savedCart = JSON.parse(localStorage.getItem("cart") || "null");
 
@@ -43,6 +43,12 @@ export const reducer = (state = initialState, { type, payload }) => {
 
     case REMOVE_FROM_CART: {
       const newCart = state.cart.filter((i) => i.id !== payload);
+      save(newCart);
+      return { ...state, cart: newCart };
+    }
+
+    case CLEAR_CART: {
+      const newCart = [];
       save(newCart);
       return { ...state, cart: newCart };
     }

@@ -1,11 +1,22 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-
-import { VStack, Text, Button, Image } from '@chakra-ui/react';
-import {styled} from "styled-components"
+import { useDispatch, useSelector } from 'react-redux';
+import { VStack, Text, Button, Image, HStack } from '@chakra-ui/react';
+import { styled } from "styled-components";
+import { ADD_TO_CART, INCREMENT_QTY, DECREMENT_QTY } from "../Redux/Cart/actionTypes";
 
 export const ProductCard = ({ id, image, name, price, category }) => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const cart = useSelector((store) => store.cartReducer?.cart || []);
+  const cartItem = cart.find((c) => c.id === id);
+
+  const handleAdd = () => {
+    dispatch({ type: ADD_TO_CART, payload: { id, image, name, price } });
+  };
+  const handleInc = () => dispatch({ type: INCREMENT_QTY, payload: id });
+  const handleDec = () => dispatch({ type: DECREMENT_QTY, payload: id });
 
   return (
 
@@ -15,8 +26,23 @@ export const ProductCard = ({ id, image, name, price, category }) => {
         <Text fontSize='xl' >Product: {name}</Text>
         <Text fontSize='xl'>Price: {price}</Text>
         <Text fontSize='xl'>Category: {category}</Text>
-        <Button onClick={() => navigate(`/singleproduct/${id}`)} bgColor={"green"}
-        p={4} fontSize='l' m={2} color={'white'}>More Details</Button>
+        <HStack>
+          <Button onClick={() => navigate(`/singleproduct/${id}`)} bgColor={"green"}
+            p={4} fontSize='l' m={2} color={'white'}>More Details
+          </Button>
+          {cartItem ? (
+            <HStack justify="center" spacing={3}>
+              <Button fontSize="l" onClick={handleDec} bgColor={"green"} color={'white'}>-</Button>
+              <Text>{cartItem.quantity || 1}</Text>
+              <Button fontSize="l" onClick={handleInc} bgColor={"green"} color={'white'}>+</Button>
+            </HStack>
+          ) : (
+            <Button onClick={handleAdd} bgColor={"green"}
+              p={4} fontSize="l" color={'white'} >Add To Cart
+            </Button>
+          )}
+        </HStack>
+
       </VStack>
     </DIV>
 

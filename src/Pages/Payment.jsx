@@ -1,11 +1,12 @@
-import { Box, Input, Flex, FormLabel, Text, Icon, Button, useToast,Alert, AlertDescription, AlertIcon, AlertTitle } from '@chakra-ui/react';
+import { Box, Input, Flex, FormLabel, Text, Icon, Button, useToast, Alert, AlertDescription, AlertIcon, AlertTitle } from '@chakra-ui/react';
 import React, { useState } from 'react';
 import Cards from 'react-credit-cards-2';
 import 'react-credit-cards-2/dist/es/styles-compiled.css'; // Import the CSS for styling
 import { BiCreditCardAlt } from 'react-icons/bi';
 import { PiContactlessPaymentLight } from 'react-icons/pi';
 import { useNavigate } from 'react-router-dom';
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux';
+import { CLEAR_CART } from '../Redux/Cart/actionTypes';
 
 export const Payment = () => {
   const [state, setState] = useState({
@@ -20,7 +21,7 @@ export const Payment = () => {
   const total = cart.reduce((sum, item) => sum + (Number(item.price || 0) * (item.quantity || 1)), 0);
 
   const [paid, setPaid] = useState();
-
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const toast = useToast();
 
@@ -47,9 +48,8 @@ export const Payment = () => {
       });
       isValid = false;
     }
-    // ... other validation checks
 
-    
+
     // Name validation
     else if (!state.name) {
       toast({
@@ -62,7 +62,7 @@ export const Payment = () => {
     }
 
     // Expiry validation
-    else if (!/^\d{4}$/.test(state.expiry)) {
+    else if (!/^(0[1-9]|1[0-2])\/\d{2}$/.test(state.expiry) && !/^(0[1-9]|1[0-2])\d{2}$/.test(state.expiry)) {
       toast({
         title: 'Invalid Expiry Date',
         description: 'Expiry date should be in MM/YY format.',
@@ -98,6 +98,7 @@ export const Payment = () => {
         duration: 5000,
         isClosable: true,
       });
+      dispatch({ type: CLEAR_CART });
       setPaid(true);
     }
   };
@@ -134,129 +135,120 @@ export const Payment = () => {
   }
 
   return (
-    // The rest of your UI code
     <Box w="60%" m="auto" mt="30px" mb="30px">
-      {/* <Text fontSize="3xl" fontWeight="bold" textAlign="left" mb="50px">
-        Payment{' '}
-      </Text> */}
-
-      {/* <Flex gap="5%" justifyContent="space-around" direction={['column', 'row']}> */}
-      
-
-        <Box p={{ base: '5%', md: '5%' }} w="100%" borderRadius="10px" borderColor='green' boxShadow= 'rgba(0, 0, 0, 0.24) 0px 3px 8px'>
-          <Text fontSize="xl" fontWeight="bold" textAlign="left">
-            Payment Methods{' '}
-          </Text>
-          <Box justifyContent="left" w={{ base: '100%', md: '30%' }} gap="5%" mt="30px">
-            <Icon alignItems="left" cursor={'pointer'} ml={2} w={12} h={12} as={BiCreditCardAlt}></Icon>
-            <Icon alignItems="left" cursor={'pointer'} ml={2} w={12} h={12} as={PiContactlessPaymentLight}></Icon>
-          </Box>
-
-          <Box>
-
-          <Cards  number={state.number} expiry={state.expiry} cvc={state.cvc} name={state.name} focused={state.focus} />
-          </Box>
-          
-          <form>
-            <Box mt="50px">
-              <Flex justifyContent="space-between" gap="5%" direction={['column', 'row']}>
-                <Box w="100%">
-                  <FormLabel fontWeight="bold" mt="10px">
-                    Card Number
-                  </FormLabel>
-                  <Input
-                    display="inline"
-                    w="100%"
-                    borderColor="gray.300"
-                    borderWidth="1px"
-                    borderRadius="md"
-                    boxShadow="rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px"
-                    type="tel"
-                    name="number"
-                    placeholder="Card Number"
-                    value={state.number}
-                    onChange={handleInputChange}
-                    onFocus={handleInputFocus}
-                  />
-                </Box>
-                <Box w="100%">
-                  <FormLabel mt="10px">Card Holder Name</FormLabel>
-                  <Input
-                    boxShadow="rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px"
-                    type="text"
-                    name="name"
-                    placeholder="Cardholder Name"
-                    value={state.name}
-                    onChange={handleInputChange}
-                    onFocus={handleInputFocus}
-                  />
-                </Box>
-              </Flex>
-            </Box>
-
-            <Box mt="50px">
-              <Flex justifyContent="space-between" gap="5%" direction={['column', 'row']}>
-                <Box w="100%">
-                  <FormLabel mt="10px">Expiry MM/YY</FormLabel>
-                  <Input
-                    boxShadow="rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px"
-                    type="text"
-                    name="expiry"
-                    placeholder="MM/YY Expiry"
-                    value={state.expiry}
-                    onChange={handleInputChange}
-                    onFocus={handleInputFocus}
-                  />
-                </Box>
-                <Box w="100%">
-                  <FormLabel mt="10px">CVV</FormLabel>
-                  <Input
-                    boxShadow="rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px"
-                    type="tel"
-                    name="cvc"
-                    placeholder="CVV"
-                    value={state.cvc}
-                    onChange={handleInputChange}
-                    onFocus={handleInputFocus}
-                  />
-                </Box>
-              </Flex>
-              <Text textAlign="left" fontSize="xs" mt="20px">
-                By confirming payment you are approving our <span style={{ color: 'blue' }}>Terms & Conditions</span> and acknowledging our{' '}
-                <span style={{ color: 'blue' }}>Privacy Policy</span> Your Payment information and{' '}
-              </Text>
-              <Box>
-                <Flex justifyContent="space-between" direction={['column', 'row']} gap='20px'>
-                  <Button
-                    mt="30px"
-                    loadingText="Submitting"
-                    colorScheme="red"
-                    variant="outline"
-                    w={{ base: '80%', md: '30%' }}
-                    borderRadius="20px"
-                    h="60px"
-                    onClick={() => navigate(-1)}
-                  >
-                    Cancel
-                  </Button>
-                  <Button
-                    mt="30px"
-                    loadingText="Submitting"
-                    colorScheme="green"
-                    variant="outline"
-                    w={{ base: '80%', md: '30%' }}
-                    borderRadius="20px"
-                    h="60px"
-                    onClick={handlePayment}
-                  >
-                    Pay {total}/-
-                  </Button>
-                </Flex>
-              </Box>
-            </Box>
-          </form>
+      <Box p={{ base: '5%', md: '5%' }} w="100%" borderRadius="10px" borderColor='green' boxShadow='rgba(0, 0, 0, 0.24) 0px 3px 8px'>
+        <Text fontSize="xl" fontWeight="bold" textAlign="left">
+          Payment Methods{' '}
+        </Text>
+        <Box justifyContent="left" w={{ base: '100%', md: '30%' }} gap="5%" mt="30px">
+          <Icon alignItems="left" cursor={'pointer'} ml={2} w={12} h={12} as={BiCreditCardAlt}></Icon>
+          <Icon alignItems="left" cursor={'pointer'} ml={2} w={12} h={12} as={PiContactlessPaymentLight}></Icon>
         </Box>
-      {/* </Flex> */}
+
+        <Box>
+
+          <Cards number={state.number} expiry={state.expiry} cvc={state.cvc} name={state.name} focused={state.focus} />
+        </Box>
+
+        <form>
+          <Box mt="50px">
+            <Flex justifyContent="space-between" gap="5%" direction={['column', 'row']}>
+              <Box w="100%">
+                <FormLabel fontWeight="bold" mt="10px">
+                  Card Number
+                </FormLabel>
+                <Input
+                  display="inline"
+                  w="100%"
+                  borderColor="gray.300"
+                  borderWidth="1px"
+                  borderRadius="md"
+                  boxShadow="rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px"
+                  type="tel"
+                  name="number"
+                  placeholder="Card Number"
+                  value={state.number}
+                  onChange={handleInputChange}
+                  onFocus={handleInputFocus}
+                />
+              </Box>
+              <Box w="100%">
+                <FormLabel mt="10px">Card Holder Name</FormLabel>
+                <Input
+                  boxShadow="rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px"
+                  type="text"
+                  name="name"
+                  placeholder="Cardholder Name"
+                  value={state.name}
+                  onChange={handleInputChange}
+                  onFocus={handleInputFocus}
+                />
+              </Box>
+            </Flex>
+          </Box>
+
+          <Box mt="50px">
+            <Flex justifyContent="space-between" gap="5%" direction={['column', 'row']}>
+              <Box w="100%">
+                <FormLabel mt="10px">Expiry MM/YY</FormLabel>
+                <Input
+                  boxShadow="rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px"
+                  type="text"
+                  name="expiry"
+                  placeholder="MM/YY Expiry"
+                  value={state.expiry}
+                  onChange={handleInputChange}
+                  onFocus={handleInputFocus}
+                />
+              </Box>
+              <Box w="100%">
+                <FormLabel mt="10px">CVV</FormLabel>
+                <Input
+                  boxShadow="rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px"
+                  type="tel"
+                  name="cvc"
+                  placeholder="CVV"
+                  value={state.cvc}
+                  onChange={handleInputChange}
+                  onFocus={handleInputFocus}
+                />
+              </Box>
+            </Flex>
+            <Text textAlign="left" fontSize="xs" mt="20px">
+              By confirming payment you are approving our <span style={{ color: 'blue' }}>Terms & Conditions</span> and acknowledging our{' '}
+              <span style={{ color: 'blue' }}>Privacy Policy</span> Your Payment information and{' '}
+            </Text>
+            <Box>
+              <Flex justifyContent="space-between" direction={['column', 'row']} gap='20px'>
+                <Button
+                  mt="30px"
+                  loadingText="Submitting"
+                  colorScheme="red"
+                  variant="outline"
+                  w={{ base: '80%', md: '30%' }}
+                  borderRadius="20px"
+                  h="60px"
+                  onClick={() => navigate(-1)}
+                >
+                  Cancel
+                </Button>
+                <Button
+                  mt="30px"
+                  loadingText="Submitting"
+                  colorScheme="green"
+                  variant="outline"
+                  w={{ base: '80%', md: '30%' }}
+                  borderRadius="20px"
+                  h="60px"
+                  onClick={handlePayment}
+                >
+                  Pay {total}/-
+                </Button>
+              </Flex>
+            </Box>
+          </Box>
+        </form>
+      </Box>
     </Box>
   );
 };

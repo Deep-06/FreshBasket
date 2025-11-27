@@ -74,7 +74,7 @@ const Navbar = () => {
          textDecoration="none"
          color={green}
        >
-         Cart ({cartCount})
+         Cart {cartCount > 0 ? `(${cartCount})` : ''}
        </Link>
         
       </HStack>

@@ -1,35 +1,51 @@
 import React from 'react'
-import { VStack, Text, Button, Image,Box } from '@chakra-ui/react';
+import { VStack, Text, Button, Image, Box, HStack } from '@chakra-ui/react';
 import { useNavigate } from 'react-router-dom'
-import {styled} from "styled-components"
-import { addTocart } from '../Redux/Cart/action';
-import { useDispatch } from 'react-redux';
+import { styled } from "styled-components"
+import { useDispatch, useSelector } from 'react-redux';
+import { ADD_TO_CART, INCREMENT_QTY, DECREMENT_QTY } from "../Redux/Cart/actionTypes";
 
-export const SingleCard = ({ id, image, name, price, category,description }) => {
-    const navigate = useNavigate();
-    const dispatch = useDispatch();
-   // const { id } = useParams();
+export const SingleCard = ({ id, image, name, price, category, description }) => {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const cart = useSelector((store) => store.cartReducer?.cart || []);
+  const cartItem = cart.find((c) => c.id === id);
 
-    const handleCart=()=>{
-      dispatch(addTocart(id));
-      navigate('/cart')
-    }
+  const handleAdd = () => {
+    dispatch({ type: ADD_TO_CART, payload: { id, image, name, price } });
+  };
+  const handleInc = () => dispatch({ type: INCREMENT_QTY, payload: id });
+  const handleDec = () => dispatch({ type: DECREMENT_QTY, payload: id });
 
   return (
     <DIV>
-    <Box  width={{ base: '100%', md: '80%', lg: '60%' }}
-      p={{ base: 2, md: 4, lg: 6 }} display={'flex'} justifyContent={'center'} alignItems={'center'}>
-    <Image src={image} alt={name} width='80%' borderRadius='20%' />
-    </Box>
-    <VStack width={{ base: '100%', md: '80%', lg: '60%' }} p={{ base: 4, md: 4, lg: 6 }} textAlign="left" alignItems={'left'}>
-      <Text fontSize="2xl"  fontWeight="bold" >Product: {name}</Text>
-      <Text fontSize="xl" fontWeight="bold">Description: {description}</Text>
-      <Text fontSize="2xl" fontWeight="bold">Price: {price}</Text>
-      <Text fontSize="2xl" fontWeight="bold">Category: {category}</Text>
-      <Button onClick={handleCart} bgColor={"green"} width='50%'
-      p={4} fontSize="l" fontWeight="bold" color={'white'} >Add To Cart</Button>
-    </VStack>
-  </DIV>
+      <Box width={{ base: '100%', md: '80%', lg: '60%' }}
+        p={{ base: 2, md: 4, lg: 6 }} display={'flex'} justifyContent={'center'} alignItems={'center'}>
+        <Image src={image} alt={name} width='80%' borderRadius='20%' />
+      </Box>
+      <VStack width={{ base: '100%', md: '80%', lg: '60%' }} p={{ base: 4, md: 4, lg: 6 }} textAlign="left" alignItems={'left'}>
+        <Text fontSize="2xl" fontWeight="bold" >Product: {name}</Text>
+        <Text fontSize="xl" fontWeight="bold">Description: {description}</Text>
+        <Text fontSize="2xl" fontWeight="bold">Price: {price}</Text>
+        <Text fontSize="2xl" fontWeight="bold">Category: {category}</Text>
+        <HStack>
+          <Button onClick={() => navigate('/products')} bgColor={"green"} width='30%'
+            p={4} fontSize='l' m={2} color={'white'}>Go Back
+          </Button>
+          {cartItem ? (
+            <HStack justify="left" spacing={3} width='50%'>
+              <Button fontSize="l" onClick={handleDec} bgColor={"green"} color={'white'}>-</Button>
+              <Text>{cartItem.quantity || 1}</Text>
+              <Button fontSize="l" onClick={handleInc} bgColor={"green"} color={'white'}>+</Button>
+            </HStack>
+          ) : (
+            <Button onClick={handleAdd} bgColor={"green"} width='40%'
+              p={4} fontSize="l" color={'white'} >Add To Cart
+            </Button>
+          )}
+        </HStack>
+      </VStack>
+    </DIV>
   )
 }
 
