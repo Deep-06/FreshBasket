@@ -2,28 +2,30 @@
 //import { Link } from 'react-router-dom'
 // import styled from 'styled-components'
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import img from "../Images/Elegant_Online_Shopping_Logo_Template-removebg-preview (3) (1).jpg";
-import { Image, Link, HStack, Button } from "@chakra-ui/react";
-import { useSelector } from 'react-redux'
+import { Image, Link, HStack, Button, Box, Text, Avatar, Menu, MenuButton, MenuList, MenuItem } from "@chakra-ui/react";
+import { ChevronDownIcon } from "@chakra-ui/icons";
+import { useSelector, useDispatch } from 'react-redux';
+import { useNavigate } from "react-router-dom";
+import { logoutUser } from "../Redux/Authentication/action";
 
 const Navbar = () => {
   const color = "#323239";
   const green = "#00c258";
 
-  const [isAuth, setIsAuth] = useState(false);
-  const [user, setUser] = useState(null);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
-  useEffect(() => {
-    const user = JSON.parse(localStorage.getItem("logedUser"));
-    const authStatus = localStorage.getItem("isAuth") === "true";
-
-    setUser(user);
-    setIsAuth(authStatus);
-  }, []);
-
+  const user = useSelector((store) => store.authReducer?.user);
+  const isAuth = useSelector((store) => store.authReducer?.isAuth);
   const cart = useSelector((store) => store.cartReducer?.cart || []);
   const cartCount = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
+
+  const handleLogout = () => {
+    dispatch(logoutUser());
+    navigate("/");
+  };
 
   return (
 
@@ -34,7 +36,7 @@ const Navbar = () => {
       flexDirection: 'row',
       justifyContent: "space-around",
       alignItems: "center",
-      padding:'10px',
+      padding: '10px',
     }}>
 
       <Image src={img} alt="Your Logo" width="100px" />
@@ -69,20 +71,32 @@ const Navbar = () => {
           About Us
         </Link>
         <Link
-         href="/cart"
-         fontSize="lg"
-         textDecoration="none"
-         color={green}
-       >
-         Cart {cartCount > 0 ? `(${cartCount})` : ''}
-       </Link>
-        
+          href="/cart"
+          fontSize="lg"
+          textDecoration="none"
+          color={green}
+        >
+          Cart {cartCount > 0 ? `(${cartCount})` : ''}
+        </Link>
+
       </HStack>
       <div>
-        {isAuth ? (
-          <Button w="10%" bg="teal" color="white" height="50px">
-            <Link href={`/userpage`}>Hi, {user[0].firstName}</Link>
-          </Button>
+        {isAuth && user ? (
+          <Menu>
+            <MenuButton as={Button} rightIcon={<ChevronDownIcon />} fontWeight={200} variant="ghost">
+              <HStack>
+                <Avatar size='xs' name={`${user.firstName}`} />
+                <Text fontWeight={600}>{user.firstName}</Text>
+              </HStack>
+            </MenuButton>
+            <MenuList>
+              <Box px={4} py={3} textAlign={'left'}>
+                <Text fontWeight="semibold">{user.firstName} {user.lastName}</Text>
+                <Text fontSize="sm" color="gray.600">{user.email}</Text>
+              </Box>
+              <MenuItem onClick={handleLogout}>Logout</MenuItem>
+            </MenuList>
+          </Menu>
         ) : (
           <Button
             to="/login"
@@ -95,8 +109,9 @@ const Navbar = () => {
             color={"white"}
             fontSize="lg"
             fontWeight={400}
+            onClick={() => navigate("/login")}
           >
-            <Link href={`/login`}>Login</Link>
+            Login
           </Button>
         )}
       </div>

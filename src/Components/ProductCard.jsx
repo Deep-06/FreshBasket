@@ -1,22 +1,24 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux';
 import { VStack, Text, Button, Image, HStack } from '@chakra-ui/react';
 import { styled } from "styled-components";
-import { ADD_TO_CART, INCREMENT_QTY, DECREMENT_QTY } from "../Redux/Cart/actionTypes";
+import { useNavigate } from 'react-router-dom'
+import { addToCart, updateCartItem } from "../Redux/Cart/action";
 
 export const ProductCard = ({ id, image, name, price, category }) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
+  const user = useSelector((store) => store.authReducer?.user);
   const cart = useSelector((store) => store.cartReducer?.cart || []);
   const cartItem = cart.find((c) => c.id === id);
 
   const handleAdd = () => {
-    dispatch({ type: ADD_TO_CART, payload: { id, image, name, price } });
+    if (!user) return navigate("/login");
+    dispatch(addToCart(user.id, { id, image, name, price }));
   };
-  const handleInc = () => dispatch({ type: INCREMENT_QTY, payload: id });
-  const handleDec = () => dispatch({ type: DECREMENT_QTY, payload: id });
+  const handleInc = () => dispatch(updateCartItem(user.id, id, (cartItem.quantity || 1) + 1));
+  const handleDec = () => dispatch(updateCartItem(user.id, id, Math.max(1, (cartItem.quantity || 1) - 1)));
 
   return (
 
@@ -32,8 +34,8 @@ export const ProductCard = ({ id, image, name, price, category }) => {
           </Button>
           {cartItem ? (
             <HStack justify="center" spacing={3}>
-              <Button fontSize="l" onClick={handleDec} bgColor={"green"} color={'white'}>-</Button>
-              <Text>{cartItem.quantity || 1}</Text>
+              <Button fontSize="l" onClick={handleDec} disabled={cartItem.quantity <= 1} bgColor={"green"} color={'white'}>-</Button>
+              <Text>{cartItem.quantity}</Text>
               <Button fontSize="l" onClick={handleInc} bgColor={"green"} color={'white'}>+</Button>
             </HStack>
           ) : (

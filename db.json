@@ -594,44 +594,13 @@
   ],
   "users": [
     {
-      "firstName": "Hemanth",
-      "lastName": "Kammara",
-      "email": "hemanth@gmail.com",
-      "password": "123456",
-      "orders": [],
-      "id": 1
-    },
-    {
-      "firstName": "Pavan ",
-      "lastName": "Thota",
-      "email": "pavanthota1010@gmail.com",
-      "password": "pavan",
-      "orders": [],
-      "id": 2
-    },
-    {
-      "firstName": "Leela",
-      "lastName": "Kammara",
-      "email": "leela@gmail.com",
-      "password": "12345",
-      "orders": [],
-      "id": 3
-    },
-    {
-      "firstName": "Tony",
-      "lastName": "Stark",
-      "email": "tony@gmail.com",
-      "password": "123456",
-      "orders": [],
-      "id": 4
-    },
-    {
       "firstName": "admin",
       "lastName": "page",
       "email": "admin@gmail.com",
       "password": "admin123",
       "orders": [],
-      "id": 5
+      "id": 1
     }
   ]
+
 }

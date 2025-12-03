@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import styled from "styled-components";
-import { addUser, getUsers } from "../Redux/Authentication/action";
+import { addUser } from "../Redux/Authentication/action";
 import { TextField } from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
 import { useToast } from "@chakra-ui/react";
@@ -16,10 +16,9 @@ const initialState = {
 
 export const SignUp = () => {
   const toast = useToast();
-
   const [data, setData] = useState(initialState);
   const dispatch = useDispatch();
-  const users = useSelector((store) => store.authReducer.users);
+  const { isLoading } = useSelector(store => store.authReducer);
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -52,18 +51,11 @@ export const SignUp = () => {
       dispatch(addUser(data));
       navigate("/login");
     }
-
-    // console.log(data)
-
-    // dispatch(addUser(data))
-    // navigate('/login')
-
-    // console.log(users)
   };
 
-  useEffect(() => {
-    dispatch(getUsers);
-  }, []);
+  // useEffect(() => {
+  //   dispatch(getUsers);
+  // }, []);
 
   return (
     <DIV>
@@ -134,7 +126,7 @@ export const SignUp = () => {
               alignItems: "center",
             }}
           >
-            <button type="submit">SignUp</button>
+            <button type="submit">{isLoading ? <Spinner size="lg" color="green" /> : 'SignUp'}</button>
             <Link
               to={`/login`}
               style={{ textDecoration: "none", color: "red" }}

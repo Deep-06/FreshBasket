@@ -1,10 +1,19 @@
 import React from "react";
 import { Image, Text, Button } from "@chakra-ui/react";
-import { useDispatch } from "react-redux";
-import { INCREMENT_QTY, DECREMENT_QTY, REMOVE_FROM_CART } from "../Redux/Cart/actionTypes";
+import { useDispatch, useSelector } from "react-redux";
+import { removeFromCart, updateCartItem } from "../Redux/Cart/action";
 
 export const CartCard = ({ id, image, name, price, quantity = 1 }) => {
   const dispatch = useDispatch();
+  const user = useSelector((store) => store.authReducer?.user);
+
+  const handleRemove = () => {
+    dispatch(removeFromCart(user.id, id));
+  };
+
+  const handleInc = () => dispatch(updateCartItem(user.id, id, quantity + 1));
+  const handleDec = () => dispatch(updateCartItem(user.id, id, Math.max(1, quantity - 1)));
+
 
   return (
     <div style={{ display: "flex", justifyContent: "space-around", alignItems: "center", width: "70%" }}>
@@ -13,10 +22,10 @@ export const CartCard = ({ id, image, name, price, quantity = 1 }) => {
       <Text fontSize="xl">Price: {price * quantity}</Text>
 
       <div style={{ display: "flex", justifyContent: "space-around", width: "30%", alignItems: "center" }}>
-        <Button onClick={() => dispatch({ type: DECREMENT_QTY, payload: id })} bgColor="green" color="white" fontSize="xl">-</Button>
+        <Button onClick={handleDec} disabled={quantity <= 1} bgColor="green" color="white" fontSize="xl">-</Button>
         <h1>{quantity}</h1>
-        <Button onClick={() => dispatch({ type: INCREMENT_QTY, payload: id })} bgColor="green" fontSize="xl" color="white">+</Button>
-        <Button onClick={() => dispatch({ type: REMOVE_FROM_CART, payload: id })} colorScheme="red">Remove</Button>
+        <Button onClick={handleInc} bgColor="green" fontSize="xl" color="white">+</Button>
+        <Button onClick={handleRemove} colorScheme="red">Remove</Button>
       </div>
     </div>
   );

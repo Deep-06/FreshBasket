@@ -1,25 +1,19 @@
-import React, { useEffect, useState } from "react";
-import { shallowEqual, useDispatch, useSelector } from "react-redux";
+import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import styled from "styled-components";
 import { loginUser } from "../Redux/Authentication/action";
 import { Alert, TextField } from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
+import { Spinner } from '@chakra-ui/react';
 
 export const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const dispatch = useDispatch();
-
   const navigate = useNavigate();
 
-  const { user, isAuth, isError } = useSelector((store) => {
-    return {
-      user: store.authReducer.logedUser,
-      isAuth: store.authReducer.isAuth,
-      isError: store.authReducer.isError,
-    };
-  }, shallowEqual);
+  const { isLoading, isError, isAuth } = useSelector(store => store.authReducer);
 
   const [show, setShow] = useState(false);
   const handleClick = () => setShow(!show);
@@ -33,7 +27,6 @@ export const Login = () => {
     }
 
     dispatch(loginUser(email, password));
-
     navigate("/");
   };
 
@@ -96,7 +89,7 @@ export const Login = () => {
             }}
           >
             <button className="submit" type="submit">
-              Login
+              {isLoading ? <Spinner size="lg" color="green" /> : 'Login'}
             </button>
             <Link
               to={`/signup`}
@@ -105,6 +98,7 @@ export const Login = () => {
               <p>New User? signUp</p>
             </Link>
           </div>
+          {isError && <p>Invalid credentials</p>}
         </form>
       </div>
     </DIV>
